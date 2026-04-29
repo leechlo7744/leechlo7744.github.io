@@ -14,10 +14,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LOE. — Chloe Lee | Supply Chain Strategist">
 <meta name="twitter:description" content="From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{--w:#ffffff;--cream:#faf9f7;--burg:#7A0E1E;--burg2:#600B18;--black:#0a0a0a;--gray:#888;--light:#f0ede8;--serif:'Playfair Display',Georgia,serif;--sans:'Instrument Sans',sans-serif;}
+a{color:inherit;text-decoration:none;-webkit-text-decoration-skip:none;}
+a:link,a:visited,a:hover,a:active{color:inherit;}
+/* Defeat iOS Safari auto-detection (dates, addresses, phone numbers) */
+a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important;}
 html{scroll-behavior:smooth;}
 body{background:var(--w);color:var(--black);font-family:var(--sans);overflow-x:hidden;cursor:none;}
 #cur{width:8px;height:8px;background:var(--burg);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
@@ -457,6 +462,44 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .co-ttl{font-size:clamp(44px,12vw,72px);}
   .s-ttl{font-size:clamp(36px,9vw,56px);}
   #side-nav{display:none;}
+
+  /* ── MOBILE FIXES ── */
+
+  /* 1. Hero typography & overflow */
+  .h-name{font-size:clamp(52px,14vw,80px);}
+  .h-statement{font-size:clamp(20px,6.5vw,32px);}
+  .hero,.si,.cs-wrap,.cs-panel{max-width:100%;overflow-x:hidden;}
+
+  /* 2. About quote — wrap + smaller */
+  .mob-quote{white-space:normal!important;font-size:clamp(20px,5.5vw,30px)!important;line-height:1.35!important;}
+
+  /* 3. Section breathing room */
+  .sec{padding:100px 0;}
+
+  /* 4. SO WHAT panels — stack vertically on mobile */
+  .so-what-panel{display:block!important;}
+  .so-what-panel .tt-iframe-wrap{max-width:100%;aspect-ratio:9/16;height:auto;}
+
+  /* 5. Inline video stats — 2-column */
+  .inline-stats-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .inline-stats-grid>div{border-right:none!important;border-bottom:.5px solid rgba(255,255,255,.07);}
+  .inline-stats-grid>div:nth-child(odd){border-right:.5px solid rgba(255,255,255,.07)!important;}
+
+  /* 6. Social section — 2-col secondary cards */
+  .so-secondary{display:grid;grid-template-columns:1fr 1fr;gap:1px;}
+  .so-card--sm{flex-direction:column;align-items:flex-start;gap:6px;}
+
+  /* 7. iframes — full width */
+  iframe{width:100%!important;}
+  .tableauPlaceholder{width:100%!important;overflow:hidden;}
+  .tableauPlaceholder object{width:100%!important;}
+
+  /* 8. Accordion (mobile only) */
+  .acc-trigger{cursor:pointer;user-select:none;position:relative;padding-right:36px;}
+  .acc-icon{position:absolute;right:0;top:2px;font-size:22px;font-weight:300;color:var(--burg);line-height:1;transition:transform .35s cubic-bezier(.16,1,.3,1);display:inline-block;}
+  .acc-trigger.acc-open .acc-icon{transform:rotate(45deg);}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .35s ease;opacity:0;margin-top:0;}
+  .acc-body.acc-open{max-height:600px;opacity:1;margin-top:16px;}
 }
 
 </style>
@@ -551,29 +594,35 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
         <div class="evo-right">
           <div class="evo-chapter">Operational <em>Depth</em></div>
           <div class="evo-block">
-            <div class="evo-co">The Moret Group</div>
-            <div class="evo-pos">Production Assistant</div>
-            <div class="evo-meta">10/2024 — 07/2025 &nbsp;·&nbsp; New York, NY</div>
-            <div class="tl-tags">
-              <span class="ctg ctg-brand">Licensed Apparel</span>
-              <span class="ctg-sep">|</span>
-              <span class="ctg ctg-hash">#WIP_Visibility</span><span class="ctg ctg-hash">#Risk_Mitigation</span><span class="ctg ctg-hash">#Data_Integrity</span>
+            <div class="acc-trigger">
+              <div class="evo-co">The Moret Group</div>
+              <div class="evo-pos">Production Assistant</div>
+              <div class="evo-meta">10/2024 — 07/2025 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-brand">Licensed Apparel</span>
+                <span class="ctg-sep">|</span>
+                <span class="ctg ctg-hash">#WIP_Visibility</span><span class="ctg ctg-hash">#Risk_Mitigation</span><span class="ctg ctg-hash">#Data_Integrity</span>
+              </div>
+              <span class="acc-icon">+</span>
             </div>
-            <ul class="tl-list">
+            <ul class="tl-list acc-body">
               <li><strong>Risk Identification:</strong> Analyzed global WIP data to preemptively identify shipment risks before they impacted stock availability.</li>
               <li><strong>Data Integrity:</strong> Maintained 100% delivery accuracy by auditing and resolving complex vendor data discrepancies.</li>
             </ul>
           </div>
           <div class="evo-block">
-            <div class="evo-co">Alexander Wang LLC</div>
-            <div class="evo-pos">Production & Product Development Intern</div>
-            <div class="evo-meta">06/2024 — 07/2024 &nbsp;·&nbsp; New York, NY</div>
-            <div class="tl-tags">
-              <span class="ctg ctg-brand">Luxury RTW</span>
-              <span class="ctg-sep">|</span>
-              <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Mastery</span><span class="ctg ctg-hash">#Global_Sourcing</span>
+            <div class="acc-trigger">
+              <div class="evo-co">Alexander Wang LLC</div>
+              <div class="evo-pos">Production & Product Development Intern</div>
+              <div class="evo-meta">06/2024 — 07/2024 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-brand">Luxury RTW</span>
+                <span class="ctg-sep">|</span>
+                <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Mastery</span><span class="ctg ctg-hash">#Global_Sourcing</span>
+              </div>
+              <span class="acc-icon">+</span>
             </div>
-            <ul class="tl-list">
+            <ul class="tl-list acc-body">
               <li><strong>System Precision:</strong> Managed data within RLM and PLM systems to ensure 100% accuracy in luxury production BOMs.</li>
             </ul>
           </div>
@@ -687,7 +736,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
     <!-- Full-width quote -->
     <div class="fu" style="margin-top:48px;padding-bottom:72px;border-bottom:1px solid rgba(10,10,10,.07);">
-      <div style="font-family:var(--serif);font-size:clamp(28px,3.5vw,52px);font-style:italic;font-weight:400;color:var(--black);line-height:1.2;letter-spacing:-.02em;white-space:nowrap;">
+      <div class="mob-quote" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,52px);font-style:italic;font-weight:400;color:var(--black);line-height:1.2;letter-spacing:-.02em;white-space:nowrap;">
         "Precision is the only strategy that scales."
       </div>
     </div>
@@ -940,7 +989,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
         </div>
 
         <!-- SO WHAT PANEL -->
-        <div style="display:grid;grid-template-columns:340px 1fr;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
+        <div class="so-what-panel" style="display:grid;grid-template-columns:340px 1fr;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
           <!-- VIDEO EMBED -->
           <div class="fu" style="background:#000;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
             <div class="tt-iframe-wrap">
@@ -957,7 +1006,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
               <p class="cs-body" style="color:#999;margin-top:14px;">The insight: virality isn&rsquo;t always about retention. When the right distribution channel picks up a video, even a short hook converts at scale. Understanding <em style="color:#e0e0e0;">where</em> traffic comes from matters as much as <em style="color:#e0e0e0;">how long</em> people watch.</p>
             </div>
             <!-- INLINE STATS -->
-            <div class="fu" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:.5px solid rgba(255,255,255,.07);padding:0;">
+            <div class="fu inline-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:.5px solid rgba(255,255,255,.07);padding:0;">
               <div style="padding:28px 28px;border-right:.5px solid rgba(255,255,255,.07);">
                 <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1;">284K</div>
                 <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-top:7px;">Views</div>
@@ -979,7 +1028,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
         </div>
 
         <!-- SO WHAT PANEL 2 -->
-        <div style="display:grid;grid-template-columns:1fr 340px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
+        <div class="so-what-panel so-what-panel--flip" style="display:grid;grid-template-columns:1fr 340px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
           <!-- ANALYSIS + STATS -->
           <div style="background:#fff;display:grid;grid-template-rows:1fr auto;">
             <div class="cs-text fu" style="padding:56px 52px 32px;">
@@ -993,7 +1042,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
               </div>
             </div>
             <!-- INLINE STATS -->
-            <div class="fu" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(10,10,10,.06);">
+            <div class="fu inline-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(10,10,10,.06);">
               <div style="padding:28px 28px;border-right:.5px solid rgba(10,10,10,.06);">
                 <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--black);letter-spacing:-.02em;line-height:1;">20K</div>
                 <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:7px;">Views</div>
@@ -1400,6 +1449,21 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') ssMove('ss1', -1);
 });
 document.addEventListener('DOMContentLoaded', () => ssInit('ss1'));
+</script>
+<script>
+/* ── MOBILE ACCORDION ── */
+if(window.innerWidth<=768){
+  document.querySelectorAll('.acc-trigger').forEach(function(trigger){
+    trigger.addEventListener('click',function(){
+      var body=this.parentElement.querySelector('.acc-body');
+      var icon=this.querySelector('.acc-icon');
+      var isOpen=body.classList.contains('acc-open');
+      body.classList.toggle('acc-open',!isOpen);
+      this.classList.toggle('acc-open',!isOpen);
+      if(icon)icon.textContent=isOpen?'+':'−';
+    });
+  });
+}
 </script>
 </body>
 </html>
