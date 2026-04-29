@@ -451,19 +451,23 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .hero{
     height:100vh;min-height:100vh;
     display:flex;flex-direction:column;
-    justify-content:flex-end; /* LOE. + content stacked at bottom */
+    justify-content:center;
+    align-items:center;
     background:#fff;overflow:hidden;
   }
-  /* LOE. — fills full screen width, sits directly above byline */
+  /* LOE. — editorial masthead, centered like a magazine cover */
   .h-name{
     position:relative!important;
     bottom:auto!important;left:auto!important;
-    font-size:42vw!important;
-    line-height:.88!important;
+    font-size:44vw!important;
+    line-height:.9!important;
     letter-spacing:-.03em;
-    padding:0 4px;
+    padding:0;
     z-index:10;
     color:var(--burg);
+    text-align:center;
+    width:100%;
+    margin-bottom:28px;
     opacity:0;transform:translateY(24px);
     animation:up 1s cubic-bezier(.16,1,.3,1) forwards .3s;
   }
@@ -472,18 +476,19 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .h-right{
     position:static;right:auto;
     width:100%;
-    padding:12px 20px 52px;
+    padding:0 24px 0;
     display:flex;flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
+    text-align:center;
     opacity:0;animation:up .9s ease forwards .5s;
   }
-  .h-role{font-size:8px;letter-spacing:.3em;margin-bottom:10px;color:#999;}
-  .h-right>div:nth-child(2){font-size:11px!important;}
-  .h-statement{font-size:clamp(34px,9vw,50px);line-height:.97;letter-spacing:-.03em;}
-  .h-divider{margin:18px 0;width:40px;}
+  .h-role{font-size:8px;letter-spacing:.3em;margin-bottom:10px;color:#999;text-align:center;}
+  .h-right>div:nth-child(2){font-size:11px!important;text-align:center;}
+  .h-statement{font-size:clamp(28px,7.5vw,44px);line-height:.97;letter-spacing:-.03em;text-align:center;}
+  .h-divider{margin:16px auto;width:40px;}
   /* Hide the description — too heavy for editorial cover */
   .h-right>p{display:none;}
-  .i-pills{flex-wrap:wrap;gap:6px;margin-top:12px;}
+  .i-pills{flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center;}
   /* Mobile-only resume CTA */
   .mob-hero-resume{
     display:inline-block!important;
@@ -494,6 +499,9 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     text-decoration:none;
     transition:background .3s;
   }
+  /* Hide cursor tracker on mobile */
+  #cur,#cur-r{display:none!important;}
+  body{cursor:auto!important;}
 
   /* ═══ CAREER — Accordion all blocks ═══ */
   .career-hook{display:flex;padding:20px 0;}
@@ -525,10 +533,10 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   /* ═══ ABOUT ═══ */
   .mob-deco{display:none!important;}
   .mob-about-detail{display:block;font-size:12px!important;line-height:1.85!important;}
-  /* 2-line quote: ~22 chars per line at this size */
-  .mob-quote{white-space:normal!important;font-size:clamp(20px,6vw,24px)!important;line-height:1.35!important;text-align:left!important;}
-  /* "No guesswork" accent — larger and bolder */
-  .mob-noguess{font-size:clamp(17px,4.8vw,22px)!important;}
+  /* 2-line quote — constrained width forces the break */
+  .mob-quote{white-space:normal!important;font-size:clamp(19px,5.5vw,22px)!important;line-height:1.38!important;text-align:left!important;max-width:72%!important;}
+  /* "No guesswork" accent — larger and pushed down */
+  .mob-noguess{font-size:clamp(17px,4.8vw,22px)!important;margin-top:40px!important;}
   .ab-bio-grid{grid-template-columns:1fr!important;gap:32px!important;}
   .ab-big{font-size:clamp(56px,15vw,88px);}
 
@@ -556,14 +564,14 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .cs-body{font-size:11px!important;line-height:1.7!important;}
   .cs-hero-sub{font-size:8px!important;}
   .mob-swipe-hint{display:none!important;}
-  /* "View full project" CTA shown on mobile */
+  /* "View full project" — plain descriptive text, no link styling */
   .mob-proj-cta{
     display:inline-block!important;
-    margin-top:16px;
-    font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--burg);font-weight:600;
-    border-bottom:1px solid rgba(122,14,30,.3);
-    padding-bottom:2px;
+    margin-top:14px;
+    font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+    color:#999;font-weight:500;
+    border-bottom:none;
+    padding-bottom:0;
     text-decoration:none;
   }
 
@@ -905,7 +913,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
             <h3 class="cs-title" style="color:var(--black);">Supply Chain &amp;<br>Inventory Risk Analysis</h3>
             <p class="cs-body" style="max-width:560px;margin-top:16px;">A data-driven analysis of 2025 demand trends and inventory risks across the fashion &amp; beauty industry. Using Tableau and Excel, this project identifies Q4 stockout risks, maps global lead time complexity, and delivers a strategic replenishment action plan.</p>
             <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">Tableau &nbsp;·&nbsp; Excel &nbsp;·&nbsp; PowerPoint &nbsp;·&nbsp; 4 Categories &nbsp;·&nbsp; 6 Slides</p>
-            <a href="https://leechlo7744.github.io/" class="mob-proj-cta">View full project on desktop ↗</a>
+            <span class="mob-proj-cta">View full case study on desktop</span>
           </div>
         </div>
 
@@ -1037,7 +1045,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
             <h3 class="cs-title" style="color:var(--black);">Consumer Analytics:<br>A Year in Data</h3>
             <p class="cs-body" style="max-width:580px;margin-top:16px;">A 12-month self-directed study applying demand analytics to real consumer behavior data — tracking 921K data points across views, engagement, and audience patterns. The same skills used to forecast inventory and plan launches, applied to measuring what moves an audience and why.</p>
             <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">Data Analysis &nbsp;&middot;&nbsp; Consumer Behavior &nbsp;&middot;&nbsp; 365 Days &nbsp;&middot;&nbsp; 5 Key Metrics</p>
-            <a href="https://leechlo7744.github.io/" class="mob-proj-cta">View full project on desktop ↗</a>
+            <span class="mob-proj-cta">View full case study on desktop</span>
           </div>
         </div>
 
@@ -1207,7 +1215,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
             <h3 class="cs-title" style="color:var(--black);">157K Views.<br>214 Hours Watched.</h3>
             <p class="cs-body" style="max-width:560px;margin-top:16px;">A year of YouTube Shorts spanning NYC lifestyle, aesthetic, and transition content. 82.5% of discovery came from the Shorts feed — the algorithm doing what it does when the content earns it. 57.3K engaged views out of 157K total: more than a third of viewers didn&rsquo;t just watch — they acted.</p>
             <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">YouTube Studio &nbsp;&middot;&nbsp; 365 Days Data &nbsp;&middot;&nbsp; Shorts</p>
-            <a href="https://leechlo7744.github.io/" class="mob-proj-cta">View full project on desktop ↗</a>
+            <span class="mob-proj-cta">View full case study on desktop</span>
           </div>
         </div>
 
