@@ -453,18 +453,17 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     padding-top:72px; /* clear fixed nav */
     background:#fff;overflow:hidden;
   }
-  /* LOE. — magazine masthead at the top */
+  /* LOE. — Vogue-style full-screen masthead */
   .h-name{
     position:relative!important;
     bottom:auto!important;left:auto!important;
-    font-size:18vw!important;
-    line-height:1!important;
+    font-size:38vw!important;
+    line-height:.9!important;
     letter-spacing:-.03em;
     text-align:left;
-    padding-left:28px;
+    padding-left:12px;
     z-index:10;
     color:var(--burg);
-    /* re-trigger animation */
     opacity:0;transform:translateY(24px);
     animation:up 1s cubic-bezier(.16,1,.3,1) forwards .3s;
   }
@@ -497,7 +496,9 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   }
 
   /* ═══ CAREER — Accordion all blocks ═══ */
-  .career-hook{display:none;}
+  .career-hook{display:flex;padding:20px 0;}
+  .hook-text{font-size:clamp(14px,4vw,18px)!important;}
+  .ed-card .tl-company{font-size:16px;}
   .evo-item{grid-template-columns:1fr;gap:6px;}
   .evo-yr{font-size:clamp(40px,10vw,58px);position:static;color:#fff;}
   .evo-chapter{font-size:clamp(18px,5vw,24px);margin-bottom:12px;}
@@ -524,7 +525,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   /* ═══ ABOUT — Minimal on mobile ═══ */
   .mob-deco{display:none!important;}
   .mob-about-detail{display:none;}
-  .mob-quote{white-space:normal!important;font-size:clamp(22px,6vw,34px)!important;line-height:1.35!important;}
+  .mob-quote{white-space:normal!important;font-size:clamp(27px,7.5vw,38px)!important;line-height:1.3!important;text-align:left!important;}
   .ab-bio-grid{grid-template-columns:1fr!important;gap:32px!important;}
   .ab-big{font-size:clamp(56px,15vw,88px);}
 
@@ -540,15 +541,15 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .p-grid::-webkit-scrollbar{display:none;}
   .p-grid>.cs-wrap{
     scroll-snap-align:start;
-    min-width:calc(100vw - 72px);
+    min-width:72vw;
     flex-shrink:0;
   }
   /* Show ONLY the header card in each project — hide all detail panels */
   .p-grid>.cs-wrap>*:not(.cs-hero){display:none!important;}
   .p-grid>.cs-wrap.fu{opacity:1!important;transform:none!important;}
-  .cs-hero--white{height:auto!important;min-height:300px;}
-  .cs-hero-content{padding:32px 24px!important;display:flex;flex-direction:column;justify-content:flex-end;}
-  .cs-title{font-size:clamp(24px,6.5vw,38px)!important;line-height:1.05!important;}
+  .cs-hero--white{height:auto!important;min-height:220px;}
+  .cs-hero-content{padding:24px 20px!important;display:flex;flex-direction:column;justify-content:flex-end;}
+  .cs-title{font-size:clamp(20px,5.5vw,30px)!important;line-height:1.05!important;}
   /* "View details" hint inside each card */
   .cs-hero-content::after{
     content:'View full analysis →';
