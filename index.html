@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOE.</title>
+<title>LOE. — Chloe Lee | Supply Chain Strategist</title>
+<meta name="description" content="Chloe Lee — Supply Chain Strategist specializing in Demand Planning, Inventory Optimization, and Launch Planning. Alexander Wang · PUMA · FIT Dean's List. Based in New York.">
+<meta name="keywords" content="Supply Chain Analyst, Demand Planner, Launch Planner, Fashion Supply Chain, Inventory Optimization, Tableau, New York, Chloe Lee">
+<meta property="og:title" content="LOE. — Chloe Lee | Supply Chain Strategist">
+<meta property="og:description" content="From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.">
+<meta property="og:url" content="https://leechlo7744.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://leechlo7744.github.io/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LOE. — Chloe Lee | Supply Chain Strategist">
+<meta name="twitter:description" content="From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -382,6 +392,28 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .tt-item:hover .tt-overlay{opacity:1;}
 .tt-views{font-size:13px;color:#fff;font-weight:600;letter-spacing:.05em;}
 .tt-cta{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:4px;}
+
+/* HOVER EFFECTS */
+.n-hire{transition:background .25s,transform .2s!important;}
+.n-hire:hover{transform:scale(1.03)!important;}
+.resume-btn{transition:background .3s,transform .2s;}
+.resume-btn:hover{background:#8a0000!important;transform:scale(1.02);}
+.co-l{transition:all .3s,transform .2s;}
+.co-l:hover{transform:scale(1.02);}
+.ctg-hash{transition:all .25s;cursor:default;}
+.ctg-hash:hover{border-color:rgba(122,14,30,.35)!important;color:#7A0E1E!important;background:rgba(122,14,30,.04)!important;}
+.p-link{transition:color .3s;}
+
+/* RESPONSIVE IFRAMES */
+.tt-iframe-wrap{width:100%;max-width:340px;aspect-ratio:9/16;margin:0 auto;overflow:hidden;}
+.tt-iframe-wrap iframe{width:100%;height:100%;border:none;display:block;}
+.pdf-embed-wrap{width:100%;aspect-ratio:4/3;min-height:400px;}
+.pdf-embed-wrap iframe{width:100%;height:100%;border:none;display:block;}
+@media(max-width:768px){
+  .tt-iframe-wrap{max-width:100%;}
+  .pdf-embed-wrap{aspect-ratio:unset;height:500px;}
+  .cs-tableau{padding:32px 16px 0!important;}
+}
 
 @media(max-width:768px){
   nav{padding:20px 24px;}
@@ -813,6 +845,20 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
           </script>
         </div>
 
+        <!-- PDF PRESENTATION -->
+        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);background:#fff;">
+          <div style="padding:40px 56px 24px;display:flex;align-items:flex-end;justify-content:space-between;">
+            <div>
+              <div class="cs-eyebrow" style="color:var(--burg);margin-bottom:6px;">Full Presentation</div>
+              <div style="font-family:var(--serif);font-size:20px;font-weight:700;color:var(--black);letter-spacing:-.01em;">Supply Chain & Inventory Risk Analysis 2025</div>
+            </div>
+            <a href="https://leechlo7744.github.io/presentation.pdf" target="_blank" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid rgba(10,10,10,.2);padding-bottom:2px;white-space:nowrap;transition:color .3s;">Open PDF →</a>
+          </div>
+          <div class="pdf-embed-wrap" style="padding:0 56px 56px;">
+            <iframe src="https://leechlo7744.github.io/presentation.pdf" title="Supply Chain & Inventory Risk Analysis 2025"></iframe>
+          </div>
+        </div>
+
       </div>
 
             <!-- PROJECT 02 -->
@@ -898,9 +944,10 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
         <div style="display:grid;grid-template-columns:340px 1fr;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
           <!-- VIDEO EMBED -->
           <div class="fu" style="background:#000;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
-            <iframe src="https://www.tiktok.com/embed/v2/7514503770055740718"
-              style="width:340px;height:100%;min-height:580px;border:none;display:block;"
-              allowfullscreen allow="encrypted-media"></iframe>
+            <div class="tt-iframe-wrap">
+              <iframe src="https://www.tiktok.com/embed/v2/7514503770055740718"
+                allowfullscreen allow="encrypted-media"></iframe>
+            </div>
           </div>
           <!-- ANALYSIS + STATS -->
           <div style="background:var(--black);display:grid;grid-template-rows:1fr auto;">
@@ -968,9 +1015,10 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
           </div>
           <!-- VIDEO EMBED -->
           <div class="fr" style="background:#f5f5f5;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-            <iframe src="https://www.tiktok.com/embed/v2/7527660249675779341"
-              style="width:340px;height:100%;min-height:580px;border:none;display:block;"
-              allowfullscreen allow="encrypted-media"></iframe>
+            <div class="tt-iframe-wrap">
+              <iframe src="https://www.tiktok.com/embed/v2/7527660249675779341"
+                allowfullscreen allow="encrypted-media"></iframe>
+            </div>
           </div>
         </div>
 
