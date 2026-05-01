@@ -15,7 +15,7 @@
 <meta name="twitter:title" content="LOE. — Chloe Lee | Supply Chain Strategist">
 <meta name="twitter:description" content="From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{--w:#ffffff;--cream:#faf9f7;--burg:#7A0E1E;--burg2:#600B18;--black:#0a0a0a;--gray:#888;--light:#f0ede8;--serif:'Playfair Display',Georgia,serif;--sans:'Instrument Sans',sans-serif;}
@@ -226,7 +226,7 @@ nav.scrolled .n-logo{color:var(--black);}
 .c-sec .sk-pill{color:#aaa;border-color:rgba(255,255,255,.15);font-size:11px;}
 .c-sec .sk-pill:hover{border-color:var(--burg);color:var(--burg);}
 .c-sec .sk-burg{color:var(--burg)!important;border-color:rgba(110,0,0,.4)!important;background:rgba(110,0,0,.05)!important;}
-.c-sec .resume-btn{background:var(--burg);}
+.c-sec .resume-btn{background:var(--burg);color:#fff!important;}
 .c-sec .resume-btn:hover{background:#8a0000;}
 .c-sec .mi{color:var(--burg);}
 .c-sec .md{color:var(--burg);}
@@ -420,6 +420,198 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 /* MARQUEE SEPARATOR */
 .sec-mq{margin:60px 0;}
 
+/* ═══════════════════════════════════════
+   HERO — Desktop two-column layout
+═══════════════════════════════════════ */
+/* Hero section: full-viewport, white */
+.hero{height:100vh;min-height:100vh;position:relative;overflow:hidden;background:#fff;}
+.hero::after{display:none;}
+/* Hide mobile-only elements on desktop */
+.h-name,.h-accent-bar,.h-arrow,.h-right{display:none!important;}
+/* Desktop two-column hero */
+.hero-desk{
+  display:none; /* shown only on desktop via override below */
+}
+@media(min-width:769px){
+  .hero-desk{
+    display:grid;
+    grid-template-columns:35% 65%;
+    height:100vh;
+    align-items:center;
+  }
+}
+/* LEFT: name block */
+.hero-desk-left{
+  padding:0 40px 0 160px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.hdl-name{
+  font-family:var(--serif);
+  font-size:clamp(72px,7vw,96px);
+  font-weight:900;
+  line-height:.9;
+  letter-spacing:-.02em;
+  color:#111;
+}
+.hdl-first{display:block;}
+.hdl-lee{
+  color:#7A0E1E;
+  font-style:italic;
+  display:block;
+}
+.hdl-role{
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#333;
+  font-weight:600;
+  margin-top:20px;
+}
+.hdl-tagline{
+  font-size:13px;
+  color:#888;
+  line-height:1.7;
+  margin-top:8px;
+  max-width:200px;
+}
+/* RIGHT: big statement */
+.hero-desk-right{
+  padding:0 100px 0 60px;
+  display:flex;
+  align-items:center;
+}
+.hdr-stmt{
+  font-family:var(--serif);
+  font-size:clamp(22px,2.6vw,34px);
+  font-weight:400;
+  line-height:1.45;
+  letter-spacing:-.01em;
+  color:#111;
+  max-width:720px;
+}
+
+/* ═══════════════════════════════════════
+   ABOUT — Sticky card layout
+═══════════════════════════════════════ */
+.about-layout{
+  display:none; /* desktop only */
+}
+@media(min-width:769px){
+  .about-layout{
+    display:grid;
+    grid-template-columns:40% 60%;
+    align-items:start;
+    background:#fff;
+  }
+}
+/* LEFT: sticky panel (hero-style) */
+.about-card{
+  position:sticky;
+  top:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 24px 0 190px;
+  background:#fff;
+}
+.ac-name{
+  font-family:var(--serif);
+  font-size:clamp(90px,9.5vw,130px);
+  font-weight:900;
+  line-height:.9;
+  letter-spacing:-.02em;
+  color:#111;
+}
+.ac-first{display:block;}
+.ac-lee{
+  color:#7A0E1E;
+  font-style:italic;
+  display:block;
+}
+.ac-role{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#333;
+  font-weight:600;
+  margin-top:32px;
+}
+.ac-desc{
+  font-size:15px;
+  color:#888;
+  line-height:1.7;
+  margin-top:8px;
+  max-width:none;
+  width:100%;
+}
+/* RIGHT: about content */
+.about-main{min-width:0;}
+/* Desktop hero panel inside about-layout (hidden on mobile) */
+.dsk-hero-rhs{display:none;}
+@media(min-width:769px){
+  section.hero{display:none!important;}
+  .dsk-hero-rhs{
+    display:flex;
+    min-height:100vh;
+    align-items:flex-start;
+    padding:42vh 100px 0 60px;
+    border-bottom:.5px solid rgba(10,10,10,.06);
+  }
+}
+/* About section — desktop, inside about-layout */
+@media(min-width:769px){
+  .about-layout .ab-sec{
+    border-top:none!important;
+    background:#fff!important;
+    overflow:visible!important;
+    padding:0!important;
+    min-height:100vh;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .about-layout .ab-sec>.si{
+    padding:0 100px 0 60px!important;
+    position:static!important;
+    width:100%!important;
+  }
+  /* Hide decorative elements */
+  .about-layout .ab-sec .s-eye,
+  .about-layout .ab-sec .mob-deco,
+  .about-layout .ab-sec>.si>.fu:not(.ab-bio-grid){display:none!important;}
+  /* Single column bio grid */
+  .about-layout .ab-bio-grid{
+    grid-template-columns:1fr!important;
+    margin-top:0!important;
+  }
+  .about-layout .ab-bio-grid>div:first-child{display:none!important;}
+  .about-layout .ab-bio-grid>div:last-child>p:first-child{display:none!important;}
+  /* Bio text — serif style, body size */
+  .about-layout .mob-about-detail{
+    display:block!important;
+    font-family:var(--serif)!important;
+    font-size:clamp(16px,1.7vw,21px)!important;
+    font-weight:400!important;
+    font-style:normal!important;
+    line-height:1.8!important;
+    color:#111!important;
+    margin-bottom:24px!important;
+    letter-spacing:-.01em!important;
+  }
+  /* No guesswork — previous plain style */
+  .about-layout .mob-noguess{
+    font-family:var(--sans)!important;
+    font-size:15px!important;
+    font-weight:400!important;font-style:normal!important;
+    color:#444!important;border-left:none!important;
+    padding-left:0!important;margin-top:72px!important;
+    line-height:1.65!important;letter-spacing:.01em!important;
+  }
+}
+
 @media(max-width:768px){
   .sec-mq{display:block!important;margin:48px 0;}
 }
@@ -435,7 +627,6 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .mob-hero-resume{display:none;}
 /* Mobile project CTA — hidden on desktop */
 .mob-proj-cta{display:none;}
-
 @media(max-width:768px){
 
   /* ═══ GLOBAL ═══ */
@@ -446,6 +637,48 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   #side-nav{display:none;}
   nav{padding:18px 24px;}
   footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
+
+  /* ═══ STICKY LAYOUT — disabled on mobile ═══ */
+  .sticky-layout{display:block;}
+  .sticky-panel{display:none;}
+  .sticky-content{display:block;}
+  /* About-layout visible on mobile; show new card+hero panel, hide old hero */
+  section.hero{display:none!important;}
+  .about-layout{display:block!important;}
+  .about-card{
+    display:flex!important;
+    position:static!important;
+    height:100vh!important;
+    padding:0 24px 0 40px!important;
+    justify-content:center!important;
+  }
+  .ac-name{font-size:clamp(72px,18vw,110px)!important;}
+  .ac-desc{font-size:13px!important;margin-top:6px!important;}
+  .dsk-hero-rhs{
+    display:flex!important;
+    min-height:100vh!important;
+    padding:42vh 24px 0 40px!important;
+    border-bottom:.5px solid rgba(10,10,10,.06)!important;
+  }
+  .hdr-stmt{font-size:clamp(18px,5vw,26px)!important;max-width:100%!important;}
+  /* Restore desktop-hidden hero elements on mobile */
+  .sticky-layout .h-name{display:block!important;}
+  .sticky-layout .h-right{display:flex!important;}
+  .sticky-layout .hero-desk-stmt{display:none!important;}
+  /* Restore hero section */
+  .sticky-layout .hero{
+    height:100vh!important;
+    overflow:hidden!important;
+    background:#fff!important;
+  }
+  /* Restore about left column */
+  .sticky-layout .ab-bio-grid>div:first-child{display:block!important;}
+  .sticky-layout .ab-sec{min-height:unset!important;display:block!important;overflow:hidden!important;}
+  .sticky-layout .ab-sec .s-eye{display:block!important;}
+  .sticky-layout .ab-sec>.si>.fu{display:block!important;}
+  .sticky-layout .mob-noguess{border-left:2px solid var(--burg)!important;padding-left:18px!important;font-weight:900!important;font-style:italic!important;color:var(--burg)!important;}
+  .sticky-layout .mob-about-detail{font-size:12px!important;line-height:1.85!important;color:#666!important;}
+  .sticky-layout .ab-bio-grid>div:last-child>p:first-child{display:block!important;}
 
   /* ═══ HERO — Luxury Editorial Cover ═══ */
   .hero{
@@ -486,8 +719,16 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .h-right>div:nth-child(2){font-size:11px!important;text-align:center;}
   .h-statement{font-size:clamp(28px,7.5vw,44px);line-height:.97;letter-spacing:-.03em;text-align:center;}
   .h-divider{margin:16px auto;width:40px;}
-  /* Hide the description — too heavy for editorial cover */
-  .h-right>p{display:none;}
+  .h-right>p{
+    display:block;
+    font-family:var(--serif)!important;
+    font-size:14px!important;
+    color:#444!important;
+    line-height:1.75!important;
+    margin-top:16px!important;
+    text-align:center;
+    letter-spacing:-.01em!important;
+  }
   .i-pills{flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center;}
   /* Mobile-only resume CTA */
   .mob-hero-resume{
@@ -621,18 +862,19 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 </nav>
 
 <div id="side-nav">
-  <a href="#career">Career</a>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
-  <a href="#social">Social</a>
+  <a href="#career">Career</a>
+  <a href="#contact">Contact</a>
 </div>
+
 
 <section class="hero" id="home">
   <div class="h-accent-bar"></div>
   <div class="h-name">LOE<span class="dot">.</span></div>
   <div class="h-right">
     <div class="h-role">Chloe Lee &nbsp;·&nbsp; New York</div>
-    <div style="font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
+    <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
     <div class="h-statement">Data in Mind.<br><em>Precision in Action.</em></div>
     <div class="h-divider"></div>
     <p style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
@@ -643,212 +885,37 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     </div>
     <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="mob-hero-resume">Download Resume →</a>
   </div>
-  <div class="h-arrow" onclick="document.getElementById('stats').scrollIntoView({behavior:'smooth'})">
+  <div class="h-arrow" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
     <div class="h-arrow-line"></div>
     <div class="h-arrow-head"></div>
   </div>
-</section>
-
-
-
-<section class="sec c-sec" id="career">
-  <div class="si">
-    <span class="s-eye fl">01 — Career</span>
-    <h2 class="s-ttl">Six Roles.<br>Two Markets.<br><em>One Goal: Optimization.</em></h2>
-
-    <!-- HOOK -->
-    <div class="career-hook fu" style="margin-top:56px;">
-      <div class="hook-line"></div>
-      <p class="hook-text">"From Korea's production floors to New York's global supply chains — I've seen how product moves, where it stalls, and what the data says about why. Every role added a layer. The picture only gets clearer."</p>
-    </div>
-
-    <!-- SKILL EVOLUTION -->
-    <div class="skill-evo fu" style="margin-top:64px;">
-      <div class="stats" id="stats" style="margin-left:-64px;margin-right:-64px;">
-        <div class="st fu"><div class="st-n"><span class="cnt" data-t="3">0</span><span>+</span></div><div class="st-l">Years Experience</div></div>
-        <div class="st fu" style="transition-delay:.1s"><div class="st-n"><span class="cnt" data-t="500">0</span><span>+</span></div><div class="st-l">Orders Analyzed</div></div>
-        <div class="st fu" style="transition-delay:.2s"><div class="st-n"><span class="cnt" data-t="5">0</span><span>+</span></div><div class="st-l">Global Brands</div></div>
-        <div class="st fu" style="transition-delay:.3s"><div class="st-n"><span class="cnt" data-t="2">0</span><span></span></div><div class="st-l">Markets Operated</div></div>
-      </div>
-    </div>
-
-    <!-- EVOLUTION TIMELINE -->
-    <div class="evo-tl">
-
-      <div class="evo-item fu">
-        <div class="evo-yr">2025</div>
-        <div class="evo-right">
-          <div class="evo-chapter">Strategic <em>Impact</em></div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">United Legwear & Apparel Co.</div>
-              <div class="evo-pos">Production Coordinator</div>
-              <div class="evo-meta">08/2025 — Present &nbsp;·&nbsp; New York, NY</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-brand">PUMA</span><span class="ctg ctg-brand">Hurley</span>
-                <span class="ctg-sep">|</span>
-                <span class="ctg ctg-hash">#Inventory_Optimization</span><span class="ctg ctg-hash">#Demand_Alignment</span><span class="ctg ctg-hash">#Analytical_Ops</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Demand Alignment:</strong> Analyzed 150+ seasonal orders to balance inventory levels with shifting market demand.</li>
-              <li><strong>Flow Optimization:</strong> Engineered custom tracking tools that eliminated supply chain bottlenecks and improved replenishment speed.</li>
-              <li><strong>Efficiency Design:</strong> Reduced operational labor costs by redesigning trim production processes.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="evo-item fu">
-        <div class="evo-yr">2024</div>
-        <div class="evo-right">
-          <div class="evo-chapter">Operational <em>Depth</em></div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">The Moret Group</div>
-              <div class="evo-pos">Production Assistant</div>
-              <div class="evo-meta">10/2024 — 07/2025 &nbsp;·&nbsp; New York, NY</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-brand">Licensed Apparel</span>
-                <span class="ctg-sep">|</span>
-                <span class="ctg ctg-hash">#WIP_Visibility</span><span class="ctg ctg-hash">#Risk_Mitigation</span><span class="ctg ctg-hash">#Data_Integrity</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Risk Identification:</strong> Analyzed global WIP data to preemptively identify shipment risks before they impacted stock availability.</li>
-              <li><strong>Data Integrity:</strong> Maintained 100% delivery accuracy by auditing and resolving complex vendor data discrepancies.</li>
-            </ul>
-          </div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">Alexander Wang LLC</div>
-              <div class="evo-pos">Production & Product Development Intern</div>
-              <div class="evo-meta">06/2024 — 07/2024 &nbsp;·&nbsp; New York, NY</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-brand">Luxury RTW</span>
-                <span class="ctg-sep">|</span>
-                <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Mastery</span><span class="ctg ctg-hash">#Global_Sourcing</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>System Precision:</strong> Managed data within RLM and PLM systems to ensure 100% accuracy in luxury production BOMs.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="evo-item fu">
-        <div class="evo-yr">2023</div>
-        <div class="evo-right">
-          <div class="evo-chapter">Production & <em>Market Lens</em></div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">Joomi Lim LLC</div>
-              <div class="evo-pos">Production Coordinator</div>
-              <div class="evo-meta">01/2023 — 06/2023 &nbsp;·&nbsp; New York, NY</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-hash">#Production_Integrity</span><span class="ctg ctg-hash">#PO_Precision</span><span class="ctg ctg-hash">#Sample_Lifecycle</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Production Integrity:</strong> Streamlined order fulfillment by managing precise PO tracking and sample coordination.</li>
-              <li><strong>Quality Control:</strong> Monitored production reporting to ensure alignment with global production plans.</li>
-            </ul>
-          </div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">Pandora</div>
-              <div class="evo-pos">Sales Associate</div>
-              <div class="evo-meta">08/2023 — 12/2023 &nbsp;·&nbsp; New York, NY</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-hash">#Consumer_Intelligence</span><span class="ctg ctg-hash">#Inventory_Ops</span><span class="ctg ctg-hash">#Retail_Analytics</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Consumer Intelligence:</strong> Drove sales performance by analyzing customer trends and maintaining precise inventory levels to support high-volume retail operations.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="evo-item fu">
-        <div class="evo-yr">2021</div>
-        <div class="evo-right">
-          <div class="evo-chapter">Building <em>Precision</em></div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">Kara Interior</div>
-              <div class="evo-pos">Product Development Intern</div>
-              <div class="evo-meta">12/2021 — 08/2022 &nbsp;·&nbsp; Republic of Korea</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-hash">#Cross_Border_Ops</span><span class="ctg ctg-hash">#Data_Verification</span><span class="ctg ctg-hash">#Supply_Chain_Basics</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Operational Support:</strong> Assisted in foundational production data management and vendor communication across the US and Korean markets.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="evo-item fu">
-        <div class="evo-yr">2020</div>
-        <div class="evo-right">
-          <div class="evo-chapter">First <em>Contact</em></div>
-          <div class="evo-block">
-            <div class="acc-trigger">
-              <div class="evo-co">Fitbon</div>
-              <div class="evo-pos">Sales Associate</div>
-              <div class="evo-meta">11/2020 — 04/2021 &nbsp;·&nbsp; South Korea</div>
-              <div class="tl-tags">
-                <span class="ctg ctg-hash">#Stock_Visibility</span><span class="ctg ctg-hash">#Retail_Inventory</span><span class="ctg ctg-hash">#Supply_Basics</span>
-              </div>
-              <span class="acc-icon">+</span>
-            </div>
-            <ul class="tl-list acc-body">
-              <li><strong>Stock Visibility:</strong> Managed store-level inventory tracking and stock replenishment, reducing discrepancies and ensuring accurate stock visibility.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="ed-sec fu" style="margin-top:80px;">
-      <span class="s-eye">Education</span>
-      <div class="ed-card" style="margin-top:28px;">
-        <div class="tl-left">
-          <div class="tl-period">2021 — 2023</div>
-          <div class="tl-loc">New York, NY</div>
-        </div>
-        <div class="tl-right" style="margin-left:48px;">
-          <div class="tl-company">Fashion Institute of Technology (FIT)</div>
-          <div class="tl-role">AAS in Fashion Business Management</div>
-          <div class="tl-tags" style="margin-top:12px;"><span class="ctg sk-burg">Dean's List 2021–2023</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESUME CTA -->
-    <div class="resume-cta fu" style="margin-top:72px;padding-top:52px;border-top:.5px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;">
-      <div>
-        <div style="font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;letter-spacing:-.01em;">This is the highlight reel.</div>
-        <div style="font-size:12px;color:#aaa;letter-spacing:.15em;text-transform:uppercase;margin-top:8px;">The full resume has every detail, every number, every tool.</div>
-      </div>
-      <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="resume-btn">Download Resume →</a>
-    </div>
-
   </div>
+
+  <!-- Desktop two-column hero (hidden on mobile) -->
+  <div class="hero-desk">
+    <div class="hero-desk-left">
+      <div class="hdl-name"><span class="hdl-first">Chloe</span><em class="hdl-lee">Lee.</em></div>
+      <div class="hdl-role">Supply Chain Strategist</div>
+      <p class="hdl-tagline">Building systems that turn supply chain complexity into clear, actionable visibility.</p>
+    </div>
+    <div class="hero-desk-right">
+      <p class="hdr-stmt">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
+    </div>
+  </div>
+
 </section>
 
-<section class="sec ab-sec" id="about" style="background:#fff;overflow:hidden;border-top:4px solid var(--burg);">
+<div class="about-layout">
+  <div class="about-card">
+    <div class="ac-name"><span class="ac-first">Chloe</span><em class="ac-lee">Lee.</em></div>
+    <div class="ac-role">Supply Chain Strategist</div>
+    <p class="ac-desc">Building systems that turn supply<br>chain complexity into clear,<br>actionable visibility.</p>
+  </div>
+  <div class="about-main">
+<div class="dsk-hero-rhs">
+  <p class="hdr-stmt">From Korea's production floors to global<br>supply chains in New York — I untangle the<br>data, build the systems, and make them work.</p>
+</div>
+<section class="sec ab-sec" id="about" style="background:#fff;overflow:hidden;">
   <div class="si" style="position:relative;">
 
     <!-- Eyebrow -->
@@ -881,21 +948,15 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
       <!-- Right: bio -->
       <div>
         <p style="font-family:var(--serif);font-size:clamp(18px,2vw,24px);color:var(--black);line-height:1.6;margin-bottom:28px;letter-spacing:-.01em;font-weight:400;">I build systems that turn supply chain complexity into clear, actionable visibility.</p>
-        <p class="mob-about-detail" style="font-size:13px;color:#666;line-height:1.95;margin-bottom:24px;">My background isn't just about moving product — it's about rapidly auditing and optimizing the systems that move them. I focus on technical accuracy, whether I'm developing interactive Tableau dashboards or stress-testing a supply chain for peak demand. I identify the logic behind the numbers to ensure every operational decision is backed by data.</p>
+        <p class="mob-about-detail" style="margin-bottom:24px;">I audit and optimize the systems that move product — from<br>stress-testing supply chains for peak demand to building Tableau<br>dashboards that make the data actually useful. I find the logic<br>behind the numbers so every operational decision is backed by<br>evidence.</p>
         <p class="mob-about-detail mob-noguess" style="font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;font-weight:900;color:var(--burg);border-left:2px solid var(--burg);padding-left:18px;line-height:1.5;margin-top:56px;">No guesswork.<br>Just high-integrity operations and lean processes.</p>
       </div>
     </div>
 
   </div>
 </section>
-
-<!-- MARQUEE SEPARATOR — sits between About and Projects -->
-<div class="mq sec-mq" style="border-top:1px solid rgba(10,10,10,.06);border-bottom:1px solid rgba(10,10,10,.06);">
-  <div class="mq-t">
-    <span class="mi">Demand Planning</span><span class="mi md">·</span><span class="mi">Supply Chain</span><span class="mi md">·</span><span class="mi">Tableau</span><span class="mi md">·</span><span class="mi">Inventory Optimization</span><span class="mi md">·</span><span class="mi">Excel Forecasting</span><span class="mi md">·</span><span class="mi">WIP Analysis</span><span class="mi md">·</span><span class="mi">Power BI</span><span class="mi md">·</span><span class="mi">PLM / RLM</span><span class="mi md">·</span><span class="mi">Order Flow Analysis</span><span class="mi md">·</span><span class="mi">Vendor Management</span><span class="mi md">·</span><span class="mi">Risk Mitigation</span><span class="mi md">·</span><span class="mi">ERP Systems</span><span class="mi md">·</span>
-    <span class="mi">Demand Planning</span><span class="mi md">·</span><span class="mi">Supply Chain</span><span class="mi md">·</span><span class="mi">Tableau</span><span class="mi md">·</span><span class="mi">Inventory Optimization</span><span class="mi md">·</span><span class="mi">Excel Forecasting</span><span class="mi md">·</span><span class="mi">WIP Analysis</span><span class="mi md">·</span><span class="mi">Power BI</span><span class="mi md">·</span><span class="mi">PLM / RLM</span><span class="mi md">·</span><span class="mi">Order Flow Analysis</span><span class="mi md">·</span><span class="mi">Vendor Management</span><span class="mi md">·</span><span class="mi">Risk Mitigation</span><span class="mi md">·</span><span class="mi">ERP Systems</span><span class="mi md">·</span>
-  </div>
-</div>
+  </div><!-- /about-main -->
+</div><!-- /about-layout -->
 
 <section class="sec p-sec" id="projects">
   <div class="si">
@@ -1396,40 +1457,199 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     <div class="mob-swipe-hint">swipe to explore projects →</div>
   </div>
 </section>
-<section class="sec so-sec" id="social">
+
+<section class="sec c-sec" id="career">
   <div class="si">
-    <span class="s-eye fl">04 — Social</span>
-    <h2 class="s-ttl">The work<br><em>continues.</em></h2>
-    <div class="so-grid">
-      <!-- LinkedIn — featured -->
-      <a href="https://www.linkedin.com/in/chloe-lee-00a337239/" class="so-card so-card--main fu" target="_blank">
-        <div>
-          <div class="so-p">LinkedIn</div>
-          <div class="so-h">Chloe Lee</div>
-          <div class="so-bio">Supply chain strategist with cross-industry experience — demand planning, inventory optimization, vendor coordination, and production operations. Open to new opportunities.</div>
-          <span class="so-cta">Connect on LinkedIn →</span>
-        </div>
-      </a>
-      <!-- Secondary: TikTok / Instagram / YouTube -->
-      <div class="so-secondary">
-        <a href="https://www.tiktok.com/@loe.cc" class="so-card so-card--sm fu" target="_blank">
-          <div class="so-left">
-            <div class="so-p">TikTok</div>
-            <div class="so-h">@loe.cc</div>
-          </div>
-          <span class="so-arr">→</span>
-        </a>
-        <a href="https://www.youtube.com/@loe.cc0" class="so-card so-card--sm fu" target="_blank">
-          <div class="so-left">
-            <div class="so-p">YouTube</div>
-            <div class="so-h">@loe.cc0</div>
-          </div>
-          <span class="so-arr">→</span>
-        </a>
+    <span class="s-eye fl">01 — Career</span>
+    <h2 class="s-ttl">Six Roles.<br>Two Markets.<br><em>One Goal: Optimization.</em></h2>
+
+    <!-- SKILL EVOLUTION -->
+    <div class="skill-evo fu" style="margin-top:64px;">
+      <div class="stats" id="stats" style="margin-left:-64px;margin-right:-64px;">
+        <div class="st fu"><div class="st-n"><span class="cnt" data-t="3">0</span><span>+</span></div><div class="st-l">Years Experience</div></div>
+        <div class="st fu" style="transition-delay:.1s"><div class="st-n"><span class="cnt" data-t="500">0</span><span>+</span></div><div class="st-l">Orders Analyzed</div></div>
+        <div class="st fu" style="transition-delay:.2s"><div class="st-n"><span class="cnt" data-t="5">0</span><span>+</span></div><div class="st-l">Global Brands</div></div>
+        <div class="st fu" style="transition-delay:.3s"><div class="st-n"><span class="cnt" data-t="2">0</span><span></span></div><div class="st-l">Markets Operated</div></div>
       </div>
     </div>
+
+    <!-- EVOLUTION TIMELINE -->
+    <div class="evo-tl">
+
+      <div class="evo-item fu">
+        <div class="evo-yr">2025</div>
+        <div class="evo-right">
+          <div class="evo-chapter">Strategic <em>Impact</em></div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">United Legwear & Apparel Co.</div>
+              <div class="evo-pos">Production Coordinator</div>
+              <div class="evo-meta">08/2025 — Present &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-brand">PUMA</span><span class="ctg ctg-brand">Hurley</span>
+                <span class="ctg-sep">|</span>
+                <span class="ctg ctg-hash">#Inventory_Optimization</span><span class="ctg ctg-hash">#Demand_Alignment</span><span class="ctg ctg-hash">#Analytical_Ops</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Demand Alignment:</strong> Analyzed 150+ seasonal orders to balance inventory levels with shifting market demand.</li>
+              <li><strong>Flow Optimization:</strong> Engineered custom tracking tools that eliminated supply chain bottlenecks and improved replenishment speed.</li>
+              <li><strong>Efficiency Design:</strong> Reduced operational labor costs by redesigning trim production processes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="evo-item fu">
+        <div class="evo-yr">2024</div>
+        <div class="evo-right">
+          <div class="evo-chapter">Operational <em>Depth</em></div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">The Moret Group</div>
+              <div class="evo-pos">Production Assistant</div>
+              <div class="evo-meta">10/2024 — 07/2025 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-brand">Licensed Apparel</span>
+                <span class="ctg-sep">|</span>
+                <span class="ctg ctg-hash">#WIP_Visibility</span><span class="ctg ctg-hash">#Risk_Mitigation</span><span class="ctg ctg-hash">#Data_Integrity</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Risk Identification:</strong> Analyzed global WIP data to preemptively identify shipment risks before they impacted stock availability.</li>
+              <li><strong>Data Integrity:</strong> Maintained 100% delivery accuracy by auditing and resolving complex vendor data discrepancies.</li>
+            </ul>
+          </div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">Alexander Wang LLC</div>
+              <div class="evo-pos">Production & Product Development Intern</div>
+              <div class="evo-meta">06/2024 — 07/2024 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-brand">Luxury RTW</span>
+                <span class="ctg-sep">|</span>
+                <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Mastery</span><span class="ctg ctg-hash">#Global_Sourcing</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>System Precision:</strong> Managed data within RLM and PLM systems to ensure 100% accuracy in luxury production BOMs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="evo-item fu">
+        <div class="evo-yr">2023</div>
+        <div class="evo-right">
+          <div class="evo-chapter">Production & <em>Market Lens</em></div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">Joomi Lim LLC</div>
+              <div class="evo-pos">Production Coordinator</div>
+              <div class="evo-meta">01/2023 — 06/2023 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-hash">#Production_Integrity</span><span class="ctg ctg-hash">#PO_Precision</span><span class="ctg ctg-hash">#Sample_Lifecycle</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Production Integrity:</strong> Streamlined order fulfillment by managing precise PO tracking and sample coordination.</li>
+              <li><strong>Quality Control:</strong> Monitored production reporting to ensure alignment with global production plans.</li>
+            </ul>
+          </div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">Pandora</div>
+              <div class="evo-pos">Sales Associate</div>
+              <div class="evo-meta">08/2023 — 12/2023 &nbsp;·&nbsp; New York, NY</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-hash">#Consumer_Intelligence</span><span class="ctg ctg-hash">#Inventory_Ops</span><span class="ctg ctg-hash">#Retail_Analytics</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Consumer Intelligence:</strong> Drove sales performance by analyzing customer trends and maintaining precise inventory levels to support high-volume retail operations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="evo-item fu">
+        <div class="evo-yr">2021</div>
+        <div class="evo-right">
+          <div class="evo-chapter">Building <em>Precision</em></div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">Kara Interior</div>
+              <div class="evo-pos">Product Development Intern</div>
+              <div class="evo-meta">12/2021 — 08/2022 &nbsp;·&nbsp; Republic of Korea</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-hash">#Cross_Border_Ops</span><span class="ctg ctg-hash">#Data_Verification</span><span class="ctg ctg-hash">#Supply_Chain_Basics</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Operational Support:</strong> Assisted in foundational production data management and vendor communication across the US and Korean markets.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="evo-item fu">
+        <div class="evo-yr">2020</div>
+        <div class="evo-right">
+          <div class="evo-chapter">First <em>Contact</em></div>
+          <div class="evo-block">
+            <div class="acc-trigger">
+              <div class="evo-co">Fitbon</div>
+              <div class="evo-pos">Sales Associate</div>
+              <div class="evo-meta">11/2020 — 04/2021 &nbsp;·&nbsp; South Korea</div>
+              <div class="tl-tags">
+                <span class="ctg ctg-hash">#Stock_Visibility</span><span class="ctg ctg-hash">#Retail_Inventory</span><span class="ctg ctg-hash">#Supply_Basics</span>
+              </div>
+              <span class="acc-icon">+</span>
+            </div>
+            <ul class="tl-list acc-body">
+              <li><strong>Stock Visibility:</strong> Managed store-level inventory tracking and stock replenishment, reducing discrepancies and ensuring accurate stock visibility.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="ed-sec fu" style="margin-top:80px;">
+      <span class="s-eye">Education</span>
+      <div class="ed-card" style="margin-top:28px;">
+        <div class="tl-left">
+          <div class="tl-period">2021 — 2023</div>
+          <div class="tl-loc">New York, NY</div>
+        </div>
+        <div class="tl-right" style="margin-left:48px;">
+          <div class="tl-company">Fashion Institute of Technology (FIT)</div>
+          <div class="tl-role">AAS in Fashion Business Management</div>
+          <div class="tl-tags" style="margin-top:12px;"><span class="ctg sk-burg">Dean's List 2021–2023</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUME CTA -->
+    <div class="resume-cta fu" style="margin-top:72px;padding-top:52px;border-top:.5px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;letter-spacing:-.01em;">This is the highlight reel.</div>
+        <div style="font-size:12px;color:#aaa;letter-spacing:.15em;text-transform:uppercase;margin-top:8px;">The full resume has every detail, every number, every tool.</div>
+      </div>
+      <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="resume-btn">Download Resume →</a>
+    </div>
+
   </div>
 </section>
+
+
 
 <section class="co-sec" id="contact">
   <div class="fu">
@@ -1444,7 +1664,6 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
 <footer>
   <div class="fl2">LOE.</div>
-  <div class="fls"><a href="mailto:leechlo7744@gmail.com">Email</a><a href="https://www.linkedin.com/in/chloe-lee-00a337239/" target="_blank">LinkedIn</a><a href="https://www.tiktok.com/@loe.cc" target="_blank">TikTok</a><a href="https://www.youtube.com/@loe.cc0" target="_blank">YouTube</a></div>
   <div class="fc">© 2026 Chloe Lee — NYC</div>
 </footer>
 
@@ -1495,9 +1714,15 @@ document.querySelectorAll('.sp-t').forEach(el=>{
 
 const sideNav=document.getElementById('side-nav');
 const sideAs=document.querySelectorAll('#side-nav a');
-new IntersectionObserver(entries=>{
-  entries.forEach(e=>sideNav.classList.toggle('sn-show',!e.isIntersecting));
-},{threshold:.1}).observe(document.querySelector('.hero'));
+const _projEl=document.querySelector('#projects');
+if(_projEl){
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting||e.boundingClientRect.top<0)sideNav.classList.add('sn-show');
+      else sideNav.classList.remove('sn-show');
+    });
+  },{threshold:0}).observe(_projEl);
+}
 const activeObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
