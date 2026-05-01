@@ -629,6 +629,13 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .mob-hero-resume{display:none;}
 /* Mobile project CTA — hidden on desktop */
 .mob-proj-cta{display:none;}
+/* Korea description: hidden in hero on mobile, shown in about on mobile */
+.mob-korea-hide{display:none;}
+.mob-about-desc{display:none;}
+@media(max-width:768px){
+  .mob-korea-hide{display:none!important;}
+  .mob-about-desc{display:block!important;}
+}
 @media(max-width:768px){
 
   /* ═══ GLOBAL ═══ */
@@ -882,10 +889,10 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   <div class="h-name">Chloe<br>Lee<span class="dot">.</span></div>
   <div class="h-right">
     <div class="h-role">Chloe Lee &nbsp;·&nbsp; New York</div>
-    <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
+    <div style="font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
     <div class="h-statement">Data in Mind.<br><em>Precision in Action.</em></div>
     <div class="h-divider"></div>
-    <p style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
+    <p class="mob-korea-hide" style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
     <div class="i-pills" style="margin-top:0;">
       <span class="i-p">Alexander Wang</span>
       <span class="i-p">PUMA · Hurley</span>
@@ -926,6 +933,9 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 </div>
 <section class="sec ab-sec" id="about" style="background:#fff;overflow:hidden;">
   <div class="si" style="position:relative;">
+
+    <!-- Mobile-only description moved from hero -->
+    <p class="mob-about-desc" style="font-size:13px;color:#555;line-height:1.9;letter-spacing:.02em;margin-bottom:32px;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
 
     <!-- Eyebrow -->
     <span class="s-eye fl">02 — About</span>
