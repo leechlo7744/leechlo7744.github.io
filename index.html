@@ -642,43 +642,30 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .sticky-layout{display:block;}
   .sticky-panel{display:none;}
   .sticky-content{display:block;}
-  /* About-layout visible on mobile; show new card+hero panel, hide old hero */
+  /* About-layout — hide old hero, show new card+statement panels */
   section.hero{display:none!important;}
   .about-layout{display:block!important;}
+  /* Name panel — full-screen, same structure as desktop but no sticky */
   .about-card{
-    display:flex!important;
     position:static!important;
-    height:100vh!important;
-    padding:0 24px 0 40px!important;
-    justify-content:center!important;
+    padding:0 32px 0 36px!important;
   }
-  .ac-name{font-size:clamp(72px,18vw,110px)!important;}
-  .ac-desc{font-size:13px!important;margin-top:6px!important;}
+  .ac-name{font-size:clamp(80px,21vw,120px)!important;}
+  .ac-role{font-size:10px!important;margin-top:28px!important;}
+  .ac-desc{font-size:13px!important;line-height:1.65!important;margin-top:10px!important;}
+  /* Hero statement panel — vertically centered */
   .dsk-hero-rhs{
     display:flex!important;
     min-height:100vh!important;
-    padding:42vh 24px 0 40px!important;
+    align-items:center!important;
+    padding:0 36px!important;
     border-bottom:.5px solid rgba(10,10,10,.06)!important;
   }
-  .hdr-stmt{font-size:clamp(18px,5vw,26px)!important;max-width:100%!important;}
-  /* Restore desktop-hidden hero elements on mobile */
-  .sticky-layout .h-name{display:block!important;}
-  .sticky-layout .h-right{display:flex!important;}
-  .sticky-layout .hero-desk-stmt{display:none!important;}
-  /* Restore hero section */
-  .sticky-layout .hero{
-    height:100vh!important;
-    overflow:hidden!important;
-    background:#fff!important;
+  .hdr-stmt{
+    font-size:clamp(20px,5.5vw,28px)!important;
+    max-width:100%!important;
+    line-height:1.5!important;
   }
-  /* Restore about left column */
-  .sticky-layout .ab-bio-grid>div:first-child{display:block!important;}
-  .sticky-layout .ab-sec{min-height:unset!important;display:block!important;overflow:hidden!important;}
-  .sticky-layout .ab-sec .s-eye{display:block!important;}
-  .sticky-layout .ab-sec>.si>.fu{display:block!important;}
-  .sticky-layout .mob-noguess{border-left:2px solid var(--burg)!important;padding-left:18px!important;font-weight:900!important;font-style:italic!important;color:var(--burg)!important;}
-  .sticky-layout .mob-about-detail{font-size:12px!important;line-height:1.85!important;color:#666!important;}
-  .sticky-layout .ab-bio-grid>div:last-child>p:first-child{display:block!important;}
 
   /* ═══ HERO — Luxury Editorial Cover ═══ */
   .hero{
