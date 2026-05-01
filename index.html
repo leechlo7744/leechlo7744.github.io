@@ -650,9 +650,9 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     position:static!important;
     padding:0 32px 0 36px!important;
   }
-  .ac-name{font-size:clamp(80px,21vw,120px)!important;}
-  .ac-role{font-size:10px!important;margin-top:28px!important;}
-  .ac-desc{font-size:13px!important;line-height:1.65!important;margin-top:10px!important;}
+  .ac-name{font-size:clamp(68px,18vw,100px)!important;}
+  .ac-role{font-size:9px!important;margin-top:24px!important;}
+  .ac-desc{font-size:12px!important;line-height:1.65!important;margin-top:8px!important;}
   /* Hero statement panel — vertically centered */
   .dsk-hero-rhs{
     display:flex!important;
@@ -662,7 +662,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     border-bottom:.5px solid rgba(10,10,10,.06)!important;
   }
   .hdr-stmt{
-    font-size:clamp(20px,5.5vw,28px)!important;
+    font-size:clamp(17px,4.8vw,24px)!important;
     max-width:100%!important;
     line-height:1.5!important;
   }
@@ -760,12 +760,15 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
   /* ═══ ABOUT ═══ */
   .mob-deco{display:none!important;}
-  .mob-about-detail{display:block;font-size:12px!important;line-height:1.85!important;}
-  /* 2-line quote — constrained width forces the break */
-  .mob-quote{white-space:normal!important;font-size:clamp(26px,7.5vw,34px)!important;line-height:1.32!important;text-align:left!important;max-width:80%!important;}
-  /* "No guesswork" accent — larger and pushed down */
-  .mob-noguess{font-size:clamp(17px,4.8vw,22px)!important;margin-top:64px!important;}
-  .ab-bio-grid{grid-template-columns:1fr!important;gap:32px!important;}
+  /* Hide quote block and redundant left bio column on mobile */
+  .ab-quote-block{display:none!important;}
+  .ab-bio-grid>div:first-child{display:none!important;}
+  .ab-bio-grid>div:last-child>p:first-child{display:none!important;}
+  .ab-bio-grid{grid-template-columns:1fr!important;gap:0!important;}
+  /* Description text */
+  .mob-about-detail{display:block!important;font-family:var(--serif)!important;font-size:14px!important;color:#111!important;line-height:1.85!important;letter-spacing:-.01em!important;}
+  /* No guesswork */
+  .mob-noguess{font-size:14px!important;margin-top:48px!important;}
   .ab-big{font-size:clamp(56px,15vw,88px);}
 
   /* ═══ PROJECTS — Compact Vertical Cards ═══ */
@@ -912,7 +915,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     <div class="mob-deco" style="font-family:var(--serif);font-size:clamp(200px,28vw,380px);color:rgba(122,14,30,.04);line-height:.8;position:absolute;top:-40px;right:-40px;font-weight:900;pointer-events:none;user-select:none;">"</div>
 
     <!-- Full-width quote -->
-    <div class="fu" style="margin-top:48px;padding-bottom:72px;border-bottom:1px solid rgba(10,10,10,.07);">
+    <div class="fu ab-quote-block" style="margin-top:48px;padding-bottom:72px;border-bottom:1px solid rgba(10,10,10,.07);">
       <div class="mob-quote" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,52px);font-style:italic;font-weight:400;color:var(--black);line-height:1.2;letter-spacing:-.02em;white-space:nowrap;">
         "Precision is the only strategy that scales."
       </div>
