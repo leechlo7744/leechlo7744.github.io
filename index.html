@@ -548,6 +548,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   max-width:none;
   width:100%;
 }
+/* Mobile-only hero statement inside about-card */
+.ac-mob-stmt{display:none;}
 /* RIGHT: about content */
 .about-main{min-width:0;}
 /* Desktop hero panel inside about-layout (hidden on mobile) */
@@ -645,27 +647,31 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   /* About-layout — hide old hero, show new card+statement panels */
   section.hero{display:none!important;}
   .about-layout{display:block!important;}
-  /* Name panel — full-screen, same structure as desktop but no sticky */
+  /* Name panel — full-screen with hero stmt appended */
   .about-card{
     position:static!important;
-    padding:0 32px 0 36px!important;
+    min-height:100vh!important;
+    height:auto!important;
+    padding:0 32px 60px 36px!important;
   }
   .ac-name{font-size:clamp(68px,18vw,100px)!important;}
   .ac-role{font-size:9px!important;margin-top:24px!important;}
   .ac-desc{font-size:12px!important;line-height:1.65!important;margin-top:8px!important;}
-  /* Hero statement panel — vertically centered */
-  .dsk-hero-rhs{
-    display:flex!important;
-    min-height:100vh!important;
-    align-items:center!important;
-    padding:0 36px!important;
-    border-bottom:.5px solid rgba(10,10,10,.06)!important;
-  }
-  .hdr-stmt{
-    font-size:clamp(17px,4.8vw,24px)!important;
-    max-width:100%!important;
+  /* Hero statement shown inside about-card on mobile */
+  .ac-mob-stmt{
+    display:block!important;
+    font-family:var(--serif)!important;
+    font-size:clamp(15px,4.2vw,20px)!important;
+    font-weight:400!important;
     line-height:1.5!important;
+    color:#111!important;
+    letter-spacing:-.01em!important;
+    margin-top:36px!important;
+    padding-top:28px!important;
+    border-top:.5px solid rgba(10,10,10,.1)!important;
   }
+  /* Hide separate hero-statement panel on mobile */
+  .dsk-hero-rhs{display:none!important;}
 
   /* ═══ HERO — Luxury Editorial Cover ═══ */
   .hero{
@@ -760,15 +766,27 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
   /* ═══ ABOUT ═══ */
   .mob-deco{display:none!important;}
+  .ab-sec{padding:56px 0!important;}
   /* Hide quote block and redundant left bio column on mobile */
   .ab-quote-block{display:none!important;}
   .ab-bio-grid>div:first-child{display:none!important;}
   .ab-bio-grid>div:last-child>p:first-child{display:none!important;}
-  .ab-bio-grid{grid-template-columns:1fr!important;gap:0!important;}
+  .ab-bio-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:0!important;}
   /* Description text */
-  .mob-about-detail{display:block!important;font-family:var(--serif)!important;font-size:14px!important;color:#111!important;line-height:1.85!important;letter-spacing:-.01em!important;}
-  /* No guesswork */
-  .mob-noguess{font-size:14px!important;margin-top:48px!important;}
+  .mob-about-detail{display:block!important;font-family:var(--serif)!important;font-size:14px!important;color:#111!important;line-height:1.8!important;letter-spacing:-.01em!important;margin-bottom:0!important;}
+  /* No guesswork — plain sans-serif, matches desktop */
+  .mob-noguess{
+    font-family:var(--sans)!important;
+    font-size:13px!important;
+    font-weight:400!important;
+    font-style:normal!important;
+    color:#444!important;
+    border-left:none!important;
+    padding-left:0!important;
+    margin-top:40px!important;
+    line-height:1.65!important;
+    letter-spacing:.01em!important;
+  }
   .ab-big{font-size:clamp(56px,15vw,88px);}
 
   /* ═══ PROJECTS — Compact Vertical Cards ═══ */
@@ -861,7 +879,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
 <section class="hero" id="home">
   <div class="h-accent-bar"></div>
-  <div class="h-name">LOE<span class="dot">.</span></div>
+  <div class="h-name">Chloe<br>Lee<span class="dot">.</span></div>
   <div class="h-right">
     <div class="h-role">Chloe Lee &nbsp;·&nbsp; New York</div>
     <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
@@ -900,6 +918,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     <div class="ac-name"><span class="ac-first">Chloe</span><em class="ac-lee">Lee.</em></div>
     <div class="ac-role">Supply Chain Strategist</div>
     <p class="ac-desc">Building systems that turn supply<br>chain complexity into clear,<br>actionable visibility.</p>
+    <p class="ac-mob-stmt">From Korea's production floors to global<br>supply chains in New York — I untangle the<br>data, build the systems, and make them work.</p>
   </div>
   <div class="about-main">
 <div class="dsk-hero-rhs">
