@@ -49,8 +49,8 @@ nav.scrolled .n-logo{color:var(--black);}
   font-family:var(--serif);font-size:clamp(130px,18vw,260px);font-weight:900;
   letter-spacing:-.03em;line-height:.85;color:#7A0E1E;
   z-index:2;
-  opacity:0;transform:translateY(24px);
-  animation:up 1s cubic-bezier(.16,1,.3,1) forwards .3s;
+  opacity:0;transform:scale(.82) translateY(20px);
+  animation:namePop .9s cubic-bezier(.34,1.56,.64,1) forwards .2s;
 }
 .h-name .dot{font-size:.35em;vertical-align:baseline;line-height:0;position:relative;top:.1em;}
 .h-right{
@@ -380,6 +380,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .fls a:hover{color:var(--burg);}
 
 @keyframes up{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes namePop{0%{opacity:0;transform:scale(.82) translateY(20px);}70%{opacity:1;transform:scale(1.04) translateY(-4px);}100%{opacity:1;transform:scale(1) translateY(0);}}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
 
@@ -629,12 +630,23 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .mob-hero-resume{display:none;}
 /* Mobile project CTA — hidden on desktop */
 .mob-proj-cta{display:none;}
-/* Korea description: hidden in hero on mobile, shown in about on mobile */
-.mob-korea-hide{display:none;}
-.mob-about-desc{display:none;}
+/* Hero description bridge — desktop hidden, mobile shown */
+.mob-desc-bridge{display:none;}
+.hero-desc-mob{display:block;}
 @media(max-width:768px){
-  .mob-korea-hide{display:none!important;}
-  .mob-about-desc{display:block!important;}
+  .hero-desc-mob{display:none!important;}
+  .mob-desc-bridge{
+    display:block;
+    padding:48px 28px 0;
+    opacity:0;
+    animation:up .9s ease forwards .8s;
+  }
+  .mob-desc-bridge p{
+    font-size:13px;
+    color:#555;
+    line-height:1.9;
+    letter-spacing:.02em;
+  }
 }
 @media(max-width:768px){
 
@@ -701,8 +713,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     text-align:center;
     width:100%;
     margin-bottom:28px;
-    opacity:0;transform:translateY(24px);
-    animation:up 1s cubic-bezier(.16,1,.3,1) forwards .3s;
+    opacity:0;transform:scale(.82) translateY(20px);
+    animation:namePop .9s cubic-bezier(.34,1.56,.64,1) forwards .2s;
   }
   .h-accent-bar{display:none;}
   .h-arrow{display:none;}
@@ -891,8 +903,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     <div class="h-role">Chloe Lee &nbsp;·&nbsp; New York</div>
     <div style="font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain Strategist</div>
     <div class="h-statement">Data in Mind.<br><em>Precision in Action.</em></div>
-    <div class="h-divider"></div>
-    <p class="mob-korea-hide" style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
+    <p class="hero-desc-mob" style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
     <div class="i-pills" style="margin-top:0;">
       <span class="i-p">Alexander Wang</span>
       <span class="i-p">PUMA · Hurley</span>
@@ -920,6 +931,11 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
 </section>
 
+<!-- Mobile-only description bridge before about section -->
+<div class="mob-desc-bridge">
+  <p>From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
+</div>
+
 <div class="about-layout">
   <div class="about-card">
     <div class="ac-name"><span class="ac-first">Chloe</span><em class="ac-lee">Lee.</em></div>
@@ -933,9 +949,6 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 </div>
 <section class="sec ab-sec" id="about" style="background:#fff;overflow:hidden;">
   <div class="si" style="position:relative;">
-
-    <!-- Mobile-only description moved from hero -->
-    <p class="mob-about-desc" style="font-size:13px;color:#555;line-height:1.9;letter-spacing:.02em;margin-bottom:32px;">From Korea's production floors to global supply chains in New York — I untangle the data, build the systems, and make them work.</p>
 
     <!-- Eyebrow -->
     <span class="s-eye fl">02 — About</span>
