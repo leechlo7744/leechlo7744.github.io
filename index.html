@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOE. — Chloe Lee | Supply Chain &amp; Planning Analytics Professional</title>
-<meta name="description" content="Chloe Lee — Supply Chain &amp; Planning Analytics Professional specializing in Demand Planning, Inventory Optimization, and Launch Planning. Fashion production experience · PUMA · FIT Dean's List. Based in New York.">
-<meta name="keywords" content="Supply Chain Analyst, Demand Planner, Launch Planner, Fashion Supply Chain, Inventory Optimization, Tableau, New York, Chloe Lee">
-<meta property="og:title" content="LOE. — Chloe Lee | Supply Chain &amp; Planning Analytics Professional">
-<meta property="og:description" content="From cross-border production support to global supply chain operations in New York — I untangle the data, build the systems, and make them work.">
+<title>LOE. — Chloe Lee | Supply Chain &amp; Operations Analytics</title>
+<meta name="description" content="Chloe Lee — Supply Chain &amp; Operations Analytics. Production coordination at licensed retail brands (PUMA · Hurley), with analytics projects in inventory risk, replenishment visibility, and supply timing. Based in New York.">
+<meta name="keywords" content="Supply Chain Analytics, Inventory Risk, Replenishment Visibility, Operations Analytics, Production Coordinator, Tableau, SQL, New York, Chloe Lee">
+<meta property="og:title" content="LOE. — Chloe Lee | Supply Chain &amp; Operations Analytics">
+<meta property="og:description" content="Hands-on production coordination and analytics projects in inventory risk, supply timing, and operational decision-making — Chloe Lee, New York.">
 <meta property="og:url" content="https://leechlo7744.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://leechlo7744.github.io/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LOE. — Chloe Lee | Supply Chain &amp; Planning Analytics Professional">
-<meta name="twitter:description" content="From cross-border production support to global supply chain operations in New York — I untangle the data, build the systems, and make them work.">
+<meta name="twitter:title" content="LOE. — Chloe Lee | Supply Chain &amp; Operations Analytics">
+<meta name="twitter:description" content="Hands-on production coordination and analytics projects in inventory risk, supply timing, and operational decision-making — Chloe Lee, New York.">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -438,7 +438,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     display:grid;
     grid-template-columns:35% 65%;
     height:100vh;
-    align-items:center;
+    align-items:start;
+    padding-top:28vh;
   }
 }
 /* LEFT: name block */
@@ -481,7 +482,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .hero-desk-right{
   padding:0 100px 0 60px;
   display:flex;
-  align-items:center;
+  align-items:flex-start;
 }
 .hdr-stmt{
   font-family:var(--serif);
@@ -514,8 +515,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  padding:0 24px 0 190px;
+  justify-content:flex-start;
+  padding:35vh 24px 0 190px;
   background:#fff;
 }
 .ac-name{
@@ -561,7 +562,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     display:flex;
     min-height:100vh;
     align-items:flex-start;
-    padding:42vh 110px 0 30px;
+    padding:42vh 110px 0 70px;
     border-bottom:.5px solid rgba(10,10,10,.06);
   }
 }
@@ -630,6 +631,10 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 .mob-hero-resume{display:none;}
 /* Mobile project CTA — hidden on desktop */
 .mob-proj-cta{display:none;}
+/* Mobile project buttons — hidden on desktop, shown on mobile */
+.mob-proj-btns{display:none;}
+.mob-proj-btn-fill{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#fff!important;background:var(--burg);padding:11px 20px;text-decoration:none;font-weight:500;white-space:nowrap;}
+.mob-proj-btn-out{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--black)!important;padding:11px 20px;text-decoration:none;font-weight:500;border:1px solid rgba(10,10,10,.2);white-space:nowrap;}
 /* Hero description bridge — desktop hidden, mobile shown */
 .mob-desc-bridge{display:none;}
 .hero-desc-mob{display:block;}
@@ -833,6 +838,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   .cs-body{font-size:11px!important;line-height:1.7!important;}
   .cs-hero-sub{font-size:8px!important;}
   .mob-swipe-hint{display:none!important;}
+  /* Mobile project buttons — show inside cs-hero on mobile */
+  .mob-proj-btns{display:flex!important;gap:10px;flex-wrap:wrap;margin-top:20px;}
   /* "View full project" — plain descriptive text, no link styling */
   .mob-proj-cta{
     display:inline-block!important;
@@ -886,7 +893,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
 <nav id="nav">
   <a href="#" class="n-logo">LOE.</a>
-  <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="n-hire">View Resume</a>
+  <a href="Chloe_Lee_Resume.pdf" target="_blank" class="n-hire">View Resume</a>
 </nav>
 
 <div id="side-nav">
@@ -902,15 +909,15 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   <div class="h-name">Chloe<br>Lee<span class="dot">.</span></div>
   <div class="h-right">
     <div class="h-role">Chloe Lee &nbsp;·&nbsp; New York</div>
-    <div style="font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain &amp; Planning Analytics Professional</div>
+    <div style="font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:18px;">Supply Chain &amp; Operations Analytics</div>
     <div class="h-statement">Data in Mind.<br><em>Precision in Action.</em></div>
-    <p class="hero-desc-mob" style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">From cross-border production support to global supply chain operations in New York —<br>I untangle the data, build the systems, and make them work.</p>
+    <p class="hero-desc-mob" style="font-size:12px;color:#555;line-height:1.9;margin-bottom:24px;letter-spacing:.02em;">Hands-on production coordination across licensed retail brands — tracking orders, validating vendor data, and identifying supply timing risks before they impact delivery. Expanding into analytics projects focused on inventory risk, replenishment gaps, and operational decision-making backed by data.</p>
     <div class="i-pills" style="margin-top:0;">
       <span class="i-p">Fashion Production Experience</span>
       <span class="i-p">PUMA · Hurley</span>
       <span class="i-p">FIT Dean's List</span>
     </div>
-    <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="mob-hero-resume">Download Resume →</a>
+    <a href="Chloe_Lee_Resume.pdf" target="_blank" class="mob-hero-resume">Download Resume →</a>
   </div>
   <div class="h-arrow" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
     <div class="h-arrow-line"></div>
@@ -922,11 +929,11 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
   <div class="hero-desk">
     <div class="hero-desk-left">
       <div class="hdl-name"><span class="hdl-first">Chloe</span><em class="hdl-lee">Lee.</em></div>
-      <div class="hdl-role">Supply Chain &amp; Planning Analytics Professional</div>
-      <p class="hdl-tagline">Building systems that turn supply chain complexity into clear, actionable visibility.</p>
+      <div class="hdl-role">Supply Chain &amp; Operations Analytics</div>
+      <p class="hdl-tagline">Turning production, order flow, and inventory data into clear planning visibility.</p>
     </div>
     <div class="hero-desk-right">
-      <p class="hdr-stmt">From cross-border production support to global supply chain operations in New York —<br>I untangle the data, build the systems, and make them work.</p>
+      <p class="hdr-stmt">Hands-on production coordination across licensed retail brands — tracking orders, validating vendor data, and identifying supply timing risks before they impact delivery. Expanding into analytics projects focused on inventory risk, replenishment gaps, and operational decision-making backed by data.</p>
     </div>
   </div>
 
@@ -936,13 +943,13 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 <div class="about-layout">
   <div class="about-card">
     <div class="ac-name"><span class="ac-first">Chloe</span><em class="ac-lee">Lee.</em></div>
-    <div class="ac-role">Supply Chain &amp; Planning Analytics Professional</div>
-    <p class="ac-desc">Building systems that turn supply chain complexity into clear, actionable visibility.</p>
-    <p class="ac-mob-stmt">From cross-border production support to global supply chain operations in New York —<br>I untangle the data, build the systems, and make them work.</p>
+    <div class="ac-role">Supply Chain &amp; Operations Analytics</div>
+    <p class="ac-desc">Turning production, order flow, and inventory data into clear planning visibility.</p>
+    <p class="ac-mob-stmt">Hands-on production coordination across licensed retail brands — tracking orders, validating vendor data, and identifying supply timing risks before they impact delivery. Expanding into analytics projects focused on inventory risk, replenishment gaps, and operational decision-making backed by data.</p>
   </div>
   <div class="about-main">
 <div class="dsk-hero-rhs">
-  <p class="hdr-stmt">From cross-border production support to global supply chain operations in New York —<br>I untangle the data, build the systems, and make them work.</p>
+  <p class="hdr-stmt">Hands-on production coordination across licensed retail brands — tracking orders, validating vendor data, and identifying supply timing risks before they impact delivery. Expanding into analytics projects focused on inventory risk, replenishment gaps, and operational decision-making backed by data.</p>
 </div>
 <section class="sec ab-sec" id="about" style="background:#fff;overflow:hidden;">
   <div class="si" style="position:relative;">
@@ -967,7 +974,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
       <div>
         <div style="font-family:var(--serif);font-size:clamp(48px,6vw,72px);font-weight:900;line-height:.9;letter-spacing:-.03em;color:var(--black);">Chloe<em style="color:var(--burg);font-style:italic;display:block;">Lee.</em></div>
         <div style="margin-top:32px;display:flex;flex-direction:column;gap:10px;">
-          <div style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;">Supply Chain &amp; Planning Analytics Professional</div>
+          <div style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;">Supply Chain &amp; Operations Analytics</div>
           <div style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;">New York · Seoul</div>
           <div style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--burg);margin-top:4px;">FIT Dean's List</div>
         </div>
@@ -976,9 +983,9 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 
       <!-- Right: bio -->
       <div>
-        <p style="font-family:var(--serif);font-size:clamp(18px,2vw,24px);color:var(--black);line-height:1.6;margin-bottom:28px;letter-spacing:-.01em;font-weight:400;">I build systems that turn supply chain complexity into clear, actionable visibility.</p>
-        <p class="mob-about-detail" style="margin-bottom:24px;">I audit and optimize the systems that move product — from stress-testing supply chains for peak demand to building Tableau dashboards that make the data actually useful. I find the logic behind the numbers so every operational decision is backed by evidence.</p>
-        <p class="mob-about-detail mob-noguess" style="font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;font-weight:900;color:var(--burg);border-left:2px solid var(--burg);padding-left:18px;line-height:1.5;margin-top:56px;">No guesswork.<br>Just high-integrity operations and lean processes.</p>
+        <p style="font-family:var(--serif);font-size:clamp(18px,2vw,24px);color:var(--black);line-height:1.6;margin-bottom:28px;letter-spacing:-.01em;font-weight:400;">Turning production, order flow, and inventory data into clear planning visibility.</p>
+        <p class="mob-about-detail" style="margin-bottom:24px;">Hands-on production coordination across licensed retail brands — tracking orders, auditing vendor data, and surfacing supply timing risks before they hit the floor. Expanding into analytics projects focused on inventory risk, replenishment gaps, and operational decision-making backed by data.</p>
+        <p class="mob-about-detail mob-noguess" style="font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;font-weight:900;color:var(--burg);border-left:2px solid var(--burg);padding-left:18px;line-height:1.5;margin-top:56px;">Built through real production experience, strengthened with analytics practice.</p>
       </div>
     </div>
 
@@ -990,496 +997,252 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
 <section class="sec p-sec" id="projects">
   <div class="si">
     <span class="s-eye fl">02 — Projects</span>
-    <h2 class="s-ttl">Logic<br><em>in action.</em></h2>
+    <h2 class="s-ttl">Supply Chain<br><em>&amp; Analytics.</em></h2>
     <div class="p-grid" style="grid-template-columns:1fr;gap:64px;margin-top:40px;">
 
-      <!-- PROJECT 01 — CASE STUDY -->
-      <div class="cs-wrap">
-
-        <!-- WHITE HEADER -->
+      <!-- PROJECT 01 — INVENTORY RISK SQL (FEATURED) -->
+      <div class="cs-wrap fu">
         <div class="cs-hero cs-hero--white">
           <div class="cs-hero-content">
-            <div class="cs-eyebrow" style="color:var(--burg);">Case Study · Supply Chain · 2025</div>
-            <h3 class="cs-title" style="color:var(--black);">Supply Chain &amp;<br>Inventory Risk Analysis</h3>
-            <p class="cs-body" style="max-width:560px;margin-top:16px;">A data-driven analysis of 2025 demand trends and inventory risks across the fashion &amp; beauty industry. Using Tableau and Excel, this project identifies Q4 stockout risks, maps global lead time complexity, and delivers a strategic replenishment action plan.</p>
-            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">Tableau &nbsp;·&nbsp; Excel &nbsp;·&nbsp; PowerPoint &nbsp;·&nbsp; 4 Categories &nbsp;·&nbsp; 6 Slides</p>
-            <span class="mob-proj-cta">View full case study on desktop</span>
+            <div class="cs-eyebrow" style="color:var(--burg);">Featured Project &middot; Inventory Risk &amp; Replenishment &middot; 2025</div>
+            <h3 class="cs-title" style="color:var(--black);">Inventory Risk Analysis<br>Using SQL</h3>
+            <p class="cs-body" style="max-width:580px;margin-top:16px;">SKU-level SQL analysis combining sales, forecast, inventory, and inbound data to identify stockout risk, forecast gaps, and replenishment priorities.</p>
+            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">SQL &nbsp;&middot;&nbsp; SQLite &nbsp;&middot;&nbsp; Excel</p>
+            <span class="mob-proj-cta">View full project on desktop</span>
+            <div class="mob-proj-btns">
+              <a href="projects/inventory-risk-sql.pdf" target="_blank" class="mob-proj-btn-fill">View Project PDF</a>
+              <a href="projects/sql-queries.sql" target="_blank" class="mob-proj-btn-out">View SQL Queries</a>
+            </div>
           </div>
         </div>
 
-        <!-- SLIDE 01 — COVER -->
-        <div class="cs-panel cs-panel--light">
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 01 — Overview</span>
-            <h4 class="cs-heading">Data-Driven Optimization for Supply Chain Resilience</h4>
-            <p class="cs-body">This project applies Tableau and Excel-based analytics to address a core operational challenge in the fashion &amp; beauty industry: balancing volatile demand with inventory precision. The goal — minimize stockouts, reduce overstock, and build a replicable planning framework.</p>
+        <!-- PANEL 01 — BUSINESS QUESTION -->
+        <div class="fu" style="display:grid;grid-template-columns:1fr 300px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);background:var(--cream);">
+          <div style="padding:40px 48px;">
+            <span class="cs-label">Panel 01 &mdash; Business Question</span>
+            <h4 class="cs-heading">Which SKUs will stock out before the next inbound shipment arrives?</h4>
+            <p class="cs-body">Four tables joined to compute net available inventory, average weekly demand, and weeks-of-supply per SKU &mdash; then cross-referenced against inbound ETAs and vendor lead time risk to flag replenishment gaps before they become stockouts.</p>
           </div>
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_1.jpg" alt="Cover Slide">
-          </div>
-        </div>
-
-        <!-- SLIDE 02 — OBJECTIVES -->
-        <div class="cs-panel cs-panel--white cs-panel--flip">
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_2.jpg" alt="Project Overview">
-          </div>
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 02 — Project Overview &amp; Objectives</span>
-            <h4 class="cs-heading">Fast-moving demand requires faster visibility.</h4>
-            <p class="cs-body">In the fashion &amp; beauty space, stock imbalances happen fast. The objective was clear: analyze 2025 sales trends and vendor lead times to minimize stockouts and optimize inventory turnover — delivering demand forecasting, risk assessment, and a replenishment strategy as key outputs.</p>
+          <div style="background:rgba(10,10,10,.03);border-left:1px solid rgba(10,10,10,.06);padding:40px 32px;display:flex;flex-direction:column;gap:14px;justify-content:center;">
+            <div style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--burg);margin-bottom:4px;font-weight:600;">Data Sources</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:10px;letter-spacing:.06em;color:#555;padding:6px 12px;border:.5px solid rgba(10,10,10,.1);background:#fff;">products</span>
+              <span style="font-size:10px;letter-spacing:.06em;color:#555;padding:6px 12px;border:.5px solid rgba(10,10,10,.1);background:#fff;">sales_orders</span>
+              <span style="font-size:10px;letter-spacing:.06em;color:#555;padding:6px 12px;border:.5px solid rgba(10,10,10,.1);background:#fff;">inventory_snapshot</span>
+              <span style="font-size:10px;letter-spacing:.06em;color:#555;padding:6px 12px;border:.5px solid rgba(10,10,10,.1);background:#fff;">inbound_shipments</span>
+            </div>
+            <div style="margin-top:8px;font-size:9px;color:#aaa;letter-spacing:.04em;">8 SKUs &nbsp;&middot;&nbsp; 4 categories</div>
           </div>
         </div>
 
-        <!-- SLIDE 03 — DEMAND TREND -->
-        <div class="cs-panel cs-panel--light">
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 03 — Demand Trend Analysis</span>
-            <h4 class="cs-heading">Makeup surged +1,200 units in Q4 — and no one saw it coming.</h4>
-            <p class="cs-body">The Tableau monthly sales chart revealed a sharp Q4 spike in the Makeup category, driven by holiday seasonal demand. The takeaway: procurement needed to be triggered 2–3 months in advance to absorb this peak without risking an out-of-stock event.</p>
-          </div>
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_3.jpg" alt="Demand Trend Analysis">
+        <!-- PANEL 02 — SQL LOGIC -->
+        <div class="fu" style="background:#0a0a0a;border-top:1px solid rgba(10,10,10,.06);padding:40px 48px;">
+          <span class="cs-label" style="color:#c0364a;">Panel 02 &mdash; SQL Logic &amp; Risk Flag Criteria</span>
+          <h4 class="cs-heading" style="color:#fff;margin-bottom:16px;">Net Available strips committed and QA-hold before WOS is calculated. Risk is flagged when supply runs out before the next vendor ETA.</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;">
+            <div style="border-left:2px solid var(--burg);padding-left:18px;">
+              <div style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:10px;">Core Formulas</div>
+              <pre style="font-family:'Space Mono',monospace;font-size:11px;color:#aaa;line-height:1.9;white-space:pre-wrap;margin:0;">Net Available
+= on_hand &minus; committed
+  &minus; qa_hold
+
+WOS = net_available
+      &divide; avg_weekly_demand
+
+Forecast Gap
+= units_sold &minus; forecast_qty</pre>
+            </div>
+            <div style="border-left:2px solid rgba(255,255,255,.08);padding-left:18px;">
+              <div style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:10px;">Risk Flag Triggers</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div><span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--burg);font-weight:600;">Critical</span><p style="font-size:11px;color:#888;margin:3px 0 0;line-height:1.6;">WOS &lt; 2 weeks <em style="color:#555;">or</em> inbound ETA exceeds lead time window</p></div>
+                <div><span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#c0364a;font-weight:600;">Watch</span><p style="font-size:11px;color:#888;margin:3px 0 0;line-height:1.6;">Positive forecast gap (sold &gt; forecast) signals underplanning</p></div>
+                <div><span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:600;">Overstock</span><p style="font-size:11px;color:#888;margin:3px 0 0;line-height:1.6;">Negative forecast gap with high on-hand &rarr; holding cost risk</p></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- SLIDE 04 — SUPPLY CHAIN -->
-        <div class="cs-panel cs-panel--white cs-panel--flip">
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_4.jpg" alt="Supply Chain Complexity">
+        <!-- PANEL 03 — KEY FINDINGS -->
+        <div class="fu" style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);background:#fff;">
+          <div style="padding:40px 48px;border-right:1px solid rgba(10,10,10,.06);">
+            <span class="cs-label">Panel 03 &mdash; Key Findings &amp; Recommendations</span>
+            <h4 class="cs-heading">All SKUs showed sub-1 week supply coverage, with the highest risk concentrated in pending inbound items and longer vendor lead times.</h4>
+            <p class="cs-body" style="margin-bottom:16px;">As of the Dec&nbsp;31 snapshot, every SKU shows WOS under 1 week. Velvet Tint (Makeup) is most urgent at WOS&nbsp;0.05 with a +467-unit forecast gap &mdash; demand consistently outpaced plan. Glow Serum and Sun Base also show positive forecast gaps, signaling a systematic underforecast in Skincare.</p>
+            <p class="cs-body">Apparel runs the opposite risk: Linen Shirt and Slim Jeans show negative gaps (&minus;196 to &minus;201 units) &mdash; forecast exceeded actual demand, increasing overstock exposure. Recommendation: expedite Night Cream and Daily Tote (both Pending), trigger immediate replenishment for Velvet Tint, and revisit Apparel forecast inputs before the next planning cycle.</p>
           </div>
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 04 — Supply Chain &amp; Lead Time Complexity</span>
-            <h4 class="cs-heading">Lead times vary by 2× across vendor regions — that gap is the risk.</h4>
-            <p class="cs-body">Vendors span South Korea, China, Vietnam, Italy, and France. South Korea ships in ~15 days; Vietnam and Italy require 28–33 days. By integrating lead time data into the Reorder Point formula — ROP = (Avg Daily Usage × Lead Time) + Safety Stock — the analysis pinpointed exactly when to reorder per SKU.</p>
-          </div>
-        </div>
-
-        <!-- SLIDE 05 — RISK ASSESSMENT -->
-        <div class="cs-panel cs-panel--light">
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 05 — Inventory Risk Assessment</span>
-            <h4 class="cs-heading">Two risks identified: a stockout and an overstock, simultaneously.</h4>
-            <p class="cs-body">Skincare &amp; Makeup faced a critical stockout alert — with Velvet Tint down to 45 units and Silk Scarf at 20 units heading into peak. At the same time, the Apparel category held 905 excess units, inflating holding costs. Both required opposite but equally urgent actions.</p>
-          </div>
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_5.jpg" alt="Inventory Risk Assessment">
-          </div>
-        </div>
-
-        <!-- SLIDE 06 — ACTION PLAN -->
-        <div class="cs-panel cs-panel--white cs-panel--flip">
-          <div class="cs-img fu">
-            <img src="Project/slides/slide_6.jpg" alt="Strategic Action Plan">
-          </div>
-          <div class="cs-text fu">
-            <span class="cs-label">Slide 06 — Strategic Action Plan</span>
-            <h4 class="cs-heading">Three recommendations. One goal: protect revenue and reduce waste.</h4>
-            <p class="cs-body">Recommendation 1: Immediately replenish +1,770 units of Skincare &amp; Makeup to prevent lost Q4 sales. Recommendation 2: Implement a 20% Safety Stock policy to buffer against lead time variability. Recommendation 3: Launch targeted Apparel promotions to accelerate sell-through and recover holding costs.</p>
-          </div>
-        </div>
-
-        <!-- LIVE TABLEAU DASHBOARD -->
-        <div class="cs-tableau fu">
-          <div class="cs-tableau-header">
+          <div style="padding:40px 32px;display:flex;flex-direction:column;gap:24px;justify-content:center;background:var(--cream);">
             <div>
-              <div class="cs-eyebrow" style="color:var(--burg);margin-bottom:6px;">Live Dashboard</div>
-              <div style="font-family:var(--serif);font-size:20px;font-weight:700;color:var(--black);letter-spacing:-.01em;">Inventory Strategy &amp; Demand Planning 2025</div>
+              <div style="font-family:var(--serif);font-size:clamp(36px,4vw,52px);font-weight:900;color:var(--black);letter-spacing:-.03em;line-height:1;">8/8</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">SKUs flagged critical</div>
             </div>
-            <span style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;">Tableau · Interactive</span>
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(36px,4vw,52px);font-weight:900;color:var(--burg);letter-spacing:-.03em;line-height:1;">&lt; 1 wk</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">WOS across all SKUs</div>
+            </div>
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(36px,4vw,52px);font-weight:900;color:var(--black);letter-spacing:-.03em;line-height:1;">2</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">Pending inbounds at risk</div>
+            </div>
           </div>
-          <div class='tableauPlaceholder' id='viz1777251959778' style='position:relative;width:100%;'>
-            <noscript><a href='#'><img alt='Demand Forecasting &amp; Inventory Risk Analysis (2025)' src='https://public.tableau.com/static/images/Lo/Loe_Company_Dashboard/InventoryStrategyDemandPlanning2025/1_rss.png' style='border:none'/></a></noscript>
-            <object class='tableauViz' style='display:none;'>
-              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-              <param name='embed_code_version' value='3'/>
-              <param name='site_root' value=''/>
-              <param name='name' value='Loe_Company_Dashboard/InventoryStrategyDemandPlanning2025'/>
-              <param name='tabs' value='no'/><param name='toolbar' value='yes'/>
-              <param name='static_image' value='https://public.tableau.com/static/images/Lo/Loe_Company_Dashboard/InventoryStrategyDemandPlanning2025/1.png'/>
-              <param name='animate_transition' value='yes'/>
-              <param name='display_static_image' value='yes'/>
-              <param name='display_spinner' value='yes'/>
-              <param name='display_overlay' value='yes'/>
-              <param name='display_count' value='yes'/>
-              <param name='language' value='en-US'/>
-              <param name='filter' value='publish=yes'/>
-            </object>
-          </div>
-          <script type='text/javascript'>
-            var divElement = document.getElementById('viz1777251959778');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if(divElement.offsetWidth > 800){vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
-            else if(divElement.offsetWidth > 500){vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}
-            else{vizElement.style.width='100%';vizElement.style.height='877px';}
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-          </script>
         </div>
 
-        <!-- PRESENTATION CTA -->
-        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);background:#fff;padding:40px 56px;display:flex;justify-content:center;">
-          <a href="https://leechlo7744.github.io/Project/presentation.pdf" target="_blank" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--black);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(10,10,10,.25);padding-bottom:6px;transition:color .4s cubic-bezier(.16,1,.3,1),border-color .4s cubic-bezier(.16,1,.3,1);" onmouseover="this.style.color='#7A0E1E';this.style.borderColor='#7A0E1E';" onmouseout="this.style.color='';this.style.borderColor='';">View Presentation →</a>
+        <!-- DESKTOP CTA BUTTONS -->
+        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);background:#fff;padding:36px 48px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+          <a href="projects/inventory-risk-sql.pdf" target="_blank" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#fff;background:var(--burg);padding:13px 26px;text-decoration:none;font-weight:500;transition:background .3s;" onmouseover="this.style.background='#5a0a16'" onmouseout="this.style.background='var(--burg)'">View Full Project PDF</a>
+          <a href="projects/sql-queries.sql" target="_blank" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--black);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(10,10,10,.25);padding-bottom:4px;transition:color .3s,border-color .3s;" onmouseover="this.style.color='#7A0E1E';this.style.borderColor='#7A0E1E'" onmouseout="this.style.color='';this.style.borderColor='';">View SQL Queries &rarr;</a>
         </div>
-
       </div>
 
-            <!-- PROJECT 02 -->
+      <!-- PROJECT 02 — TABLEAU INVENTORY STRATEGY DASHBOARD -->
       <div class="cs-wrap">
 
         <!-- WHITE HEADER -->
         <div class="cs-hero cs-hero--white">
           <div class="cs-hero-content">
-            <div class="cs-eyebrow" style="color:var(--burg);">Self-Directed Analytics Project &middot; Consumer Data &middot; Apr 2025&ndash;Apr 2026</div>
-            <h3 class="cs-title" style="color:var(--black);">Consumer Analytics:<br>A Year in Data</h3>
-            <p class="cs-body" style="max-width:580px;margin-top:16px;">A 12-month self-directed study applying demand analytics to real consumer behavior data — tracking 921K data points across views, engagement, and audience patterns. The same skills used to forecast inventory and plan launches, applied to measuring what moves an audience and why.</p>
-            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">Data Analysis &nbsp;&middot;&nbsp; Consumer Behavior &nbsp;&middot;&nbsp; 365 Days &nbsp;&middot;&nbsp; 5 Key Metrics</p>
+            <div class="cs-eyebrow" style="color:var(--burg);">Analytics Project &middot; Inventory Strategy &middot; 2025</div>
+            <h3 class="cs-title" style="color:var(--black);">Tableau Inventory Strategy<br>Dashboard</h3>
+            <p class="cs-body" style="max-width:560px;margin-top:16px;">A Tableau and Excel project analyzing demand trends, inventory risk, lead time complexity, and replenishment actions across product categories.</p>
+            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">Tableau &nbsp;&middot;&nbsp; Excel &nbsp;&middot;&nbsp; 4 Categories &nbsp;&middot;&nbsp; Inventory Risk &amp; Replenishment</p>
             <span class="mob-proj-cta">View full case study on desktop</span>
-          </div>
-        </div>
-
-        <!-- STATS ROW -->
-        <div class="cs-stats-row cs-stats-row--light" style="grid-template-columns:repeat(5,1fr);">
-          <div class="cs-stat fu">
-            <div class="cs-stat-n">921K</div>
-            <div class="cs-stat-l">Video Views</div>
-          </div>
-          <div class="cs-stat fu" style="transition-delay:.1s">
-            <div class="cs-stat-n">68K</div>
-            <div class="cs-stat-l">Likes</div>
-          </div>
-          <div class="cs-stat fu" style="transition-delay:.2s">
-            <div class="cs-stat-n">14K</div>
-            <div class="cs-stat-l">Comments</div>
-          </div>
-          <div class="cs-stat fu" style="transition-delay:.3s">
-            <div class="cs-stat-n">47K</div>
-            <div class="cs-stat-l">Profile Views</div>
-          </div>
-          <div class="cs-stat fu" style="border-right:none;transition-delay:.4s">
-            <div class="cs-stat-n">83.9%</div>
-            <div class="cs-stat-l">FYP Reach</div>
-          </div>
-        </div>
-
-        <!-- VIEWS CHART PANEL -->
-        <div class="cs-panel cs-panel--white" style="display:block;border-top:1px solid rgba(10,10,10,.06);">
-          <div class="cs-text fu" style="display:block;padding:48px 56px 8px;">
-            <span class="cs-label">Views Over Time &middot; Apr 2025 – Apr 2026</span>
-            <h4 class="cs-heading" style="margin-bottom:12px;">Two peaks. Both above 15K. A year of consistent reach.</h4>
-            <p class="cs-body">A September spike to 16K+ daily views and a summer peak above 12K — both driven entirely by the For You Page. Between the spikes, a stable 2K–5K daily baseline signals an audience that keeps coming back.</p>
-          </div>
-          <div style="padding:8px 40px 40px;">
-            <svg viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-              <!-- grid lines -->
-              <line x1="20" y1="20" x2="780" y2="20" stroke="#ebebeb" stroke-width="0.8" stroke-dasharray="4,4"/>
-              <line x1="20" y1="65" x2="780" y2="65" stroke="#ebebeb" stroke-width="0.8" stroke-dasharray="4,4"/>
-              <line x1="20" y1="110" x2="780" y2="110" stroke="#ebebeb" stroke-width="0.8" stroke-dasharray="4,4"/>
-              <line x1="20" y1="155" x2="780" y2="155" stroke="#ebebeb" stroke-width="0.8" stroke-dasharray="4,4"/>
-              <line x1="20" y1="200" x2="780" y2="200" stroke="#d8d8d8" stroke-width="0.8"/>
-              <!-- y-axis labels -->
-              <text x="16" y="24" text-anchor="end" font-size="9" fill="#bbb" font-family="sans-serif">20K</text>
-              <text x="16" y="69" text-anchor="end" font-size="9" fill="#bbb" font-family="sans-serif">15K</text>
-              <text x="16" y="114" text-anchor="end" font-size="9" fill="#bbb" font-family="sans-serif">10K</text>
-              <text x="16" y="159" text-anchor="end" font-size="9" fill="#bbb" font-family="sans-serif">5K</text>
-              <!-- area fill -->
-              <path d="M20,173 L28,140 L41,162 L51,118 L62,158 L72,140 L82,164 L100,150 L118,158 L126,63 L133,155 L145,162 L160,155 L175,162 L190,168 L210,162 L230,157 L250,168 L270,162 L290,157 L299,60 L305,160 L318,170 L335,157 L355,140 L375,136 L384,132 L395,160 L415,168 L436,171 L457,160 L467,157 L478,168 L499,171 L519,164 L530,132 L540,164 L561,177 L582,186 L603,186 L623,191 L644,189 L665,182 L676,180 L696,184 L717,177 L738,173 L758,162 L776,150 L776,200 L20,200 Z" fill="rgba(122,14,30,0.07)"/>
-              <!-- line -->
-              <polyline points="20,173 28,140 41,162 51,118 62,158 72,140 82,164 100,150 118,158 126,63 133,155 145,162 160,155 175,162 190,168 210,162 230,157 250,168 270,162 290,157 299,60 305,160 318,170 335,157 355,140 375,136 384,132 395,160 415,168 436,171 457,160 467,157 478,168 499,171 519,164 530,132 540,164 561,177 582,186 603,186 623,191 644,189 665,182 676,180 696,184 717,177 738,173 758,162 776,150" fill="none" stroke="#7A0E1E" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-              <!-- peak dot Jun 16 -->
-              <circle cx="126" cy="63" r="3" fill="#7A0E1E"/>
-              <text x="126" y="56" text-anchor="middle" font-size="8.5" fill="#7A0E1E" font-family="sans-serif">15,210</text>
-              <!-- peak dot Sep 7 -->
-              <circle cx="299" cy="60" r="3" fill="#7A0E1E"/>
-              <text x="299" y="53" text-anchor="middle" font-size="8.5" fill="#7A0E1E" font-family="sans-serif">15,576</text>
-              <!-- x-axis labels -->
-              <text x="20" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Apr '25</text>
-              <text x="126" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Jun</text>
-              <text x="239" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Aug</text>
-              <text x="311" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Sep</text>
-              <text x="457" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Nov</text>
-              <text x="603" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Feb '26</text>
-              <text x="776" y="220" font-size="9" fill="#bbb" text-anchor="middle" font-family="sans-serif">Apr '26</text>
-            </svg>
-          </div>
-        </div>
-
-        <!-- SO WHAT PANEL -->
-        <div class="so-what-panel" style="display:grid;grid-template-columns:340px 1fr;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
-          <!-- VIDEO EMBED -->
-          <div class="fu" style="background:#000;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
-            <div class="tt-iframe-wrap">
-              <iframe src="https://www.tiktok.com/embed/v2/7514503770055740718"
-                allowfullscreen allow="encrypted-media"></iframe>
-            </div>
-          </div>
-          <!-- ANALYSIS + STATS -->
-          <div style="background:var(--black);display:grid;grid-template-rows:1fr auto;">
-            <div class="cs-text fu" style="padding:56px 52px 32px;">
-              <span class="cs-label" style="color:#c0364a;">Viral Video Analysis &middot; Jun 10, 2025</span>
-              <h4 class="cs-heading" style="color:#fff;">284K views. 0.38s average watch time.<br>So what does that mean?</h4>
-              <p class="cs-body" style="color:#999;">Most viewers stopped at 0:02 — but the video still drove 1.1K new followers in days. 85.6% of traffic came from &ldquo;Other&rdquo; sources: brand amplification through the @Pulio_US partnership pushed it far outside the usual FYP ecosystem.</p>
-              <p class="cs-body" style="color:#999;margin-top:14px;">The insight: virality isn&rsquo;t always about retention. When the right distribution channel picks up a video, even a short hook converts at scale. Understanding <em style="color:#e0e0e0;">where</em> traffic comes from matters as much as <em style="color:#e0e0e0;">how long</em> people watch.</p>
-            </div>
-            <!-- INLINE STATS -->
-            <div class="fu inline-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:.5px solid rgba(255,255,255,.07);padding:0;">
-              <div style="padding:28px 28px;border-right:.5px solid rgba(255,255,255,.07);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1;">284K</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-top:7px;">Views</div>
-              </div>
-              <div style="padding:28px 28px;border-right:.5px solid rgba(255,255,255,.07);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1;">1.1K</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-top:7px;">New Followers</div>
-              </div>
-              <div style="padding:28px 28px;border-right:.5px solid rgba(255,255,255,.07);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--burg);letter-spacing:-.02em;line-height:1;">85.6%</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-top:7px;">Other Traffic</div>
-              </div>
-              <div style="padding:28px 28px;">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1;">0.38s</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-top:7px;">Avg Watch Time</div>
-              </div>
+            <div class="mob-proj-btns">
+              <a href="https://leechlo7744.github.io/Project/presentation.pdf" target="_blank" class="mob-proj-btn-fill">View Case Study PDF</a>
+              <a href="https://public.tableau.com/views/Loe_Company_Dashboard/InventoryStrategyDemandPlanning2025" target="_blank" class="mob-proj-btn-out">View Dashboard</a>
             </div>
           </div>
         </div>
 
-        <!-- SO WHAT PANEL 2 -->
-        <div class="so-what-panel so-what-panel--flip" style="display:grid;grid-template-columns:1fr 340px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
-          <!-- ANALYSIS + STATS -->
-          <div style="background:#fff;display:grid;grid-template-rows:1fr auto;">
-            <div class="cs-text fu" style="padding:56px 52px 32px;">
-              <span class="cs-label">Organic Content Analysis &middot; Jul 16, 2025</span>
-              <h4 class="cs-heading">Fewer views. 20&times; the watch time. The algorithm noticed.</h4>
-              <p class="cs-body">The NYC restaurant video reached only 20K views — but 1 in 4 viewers watched it to the end, and average watch time was 7.62s. The FYP picked it up at 25.7%, nearly double the collab video&rsquo;s 13.7%.</p>
-              <p class="cs-body" style="margin-top:14px;">The contrast reveals a core insight: <em style="color:var(--black);font-style:normal;font-weight:700;">retention drives algorithmic reach.</em> Brand distribution creates spikes. Genuine engagement builds trust — and the algorithm rewards it with organic reach over time.</p>
-              <div style="margin-top:28px;padding:20px 24px;background:rgba(122,14,30,.04);border-left:2px solid var(--burg);">
-                <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--burg);margin-bottom:6px;">Takeaway</div>
-                <div style="font-size:13px;color:#444;line-height:1.7;">High retention signals quality to the algorithm. Even at smaller scale, it builds a more loyal audience — 115 new followers who stayed for the whole video.</div>
-              </div>
-            </div>
-            <!-- INLINE STATS -->
-            <div class="fu inline-stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(10,10,10,.06);">
-              <div style="padding:28px 28px;border-right:.5px solid rgba(10,10,10,.06);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--black);letter-spacing:-.02em;line-height:1;">20K</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:7px;">Views</div>
-              </div>
-              <div style="padding:28px 28px;border-right:.5px solid rgba(10,10,10,.06);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--burg);letter-spacing:-.02em;line-height:1;">7.62s</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:7px;">Avg Watch Time</div>
-              </div>
-              <div style="padding:28px 28px;border-right:.5px solid rgba(10,10,10,.06);">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--burg);letter-spacing:-.02em;line-height:1;">25.7%</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:7px;">Full Completion</div>
-              </div>
-              <div style="padding:28px 28px;">
-                <div style="font-family:var(--serif);font-size:clamp(22px,2.5vw,30px);font-weight:900;color:var(--black);letter-spacing:-.02em;line-height:1;">25.7%</div>
-                <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:7px;">FYP Reach</div>
-              </div>
-            </div>
+        <!-- PANEL 01 — PROJECT OVERVIEW -->
+        <div class="fu" style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);background:var(--cream);">
+          <div style="padding:40px 48px;border-right:1px solid rgba(10,10,10,.06);">
+            <span class="cs-label">Panel 01 &mdash; Project Overview</span>
+            <h4 class="cs-heading">Inventory planning across 4 categories: from seasonal demand trends to vendor lead time risk.</h4>
+            <p class="cs-body">This Tableau project analyzes 2025 sales trends, vendor lead times, and inventory positions across Makeup, Skincare, Apparel, and Accessories &mdash; building a replicable framework for replenishment visibility and supply timing decisions.</p>
           </div>
-          <!-- VIDEO EMBED -->
-          <div class="fr" style="background:#f5f5f5;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-            <div class="tt-iframe-wrap">
-              <iframe src="https://www.tiktok.com/embed/v2/7527660249675779341"
-                allowfullscreen allow="encrypted-media"></iframe>
+          <div style="padding:40px 32px;display:flex;flex-direction:column;gap:20px;justify-content:center;">
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(32px,3.5vw,46px);font-weight:900;color:var(--black);letter-spacing:-.03em;line-height:1;">4</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">Categories tracked</div>
+            </div>
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(32px,3.5vw,46px);font-weight:900;color:var(--burg);letter-spacing:-.03em;line-height:1;">5</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">Vendor regions mapped</div>
             </div>
           </div>
         </div>
 
-        <!-- TIKTOK CTA -->
-        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;background:#fff;">
-          <div style="font-size:12px;color:#aaa;letter-spacing:.08em;">@loe.cc &nbsp;·&nbsp; TikTok</div>
-          <a href="https://www.tiktok.com/@loe.cc" target="_blank" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid rgba(10,10,10,.2);padding-bottom:2px;transition:color .2s;">View Profile &rarr;</a>
+        <!-- PANEL 02 — INVENTORY RISK ASSESSMENT -->
+        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);background:#fff;padding:40px 48px;">
+          <span class="cs-label">Panel 02 &mdash; Inventory Risk Assessment</span>
+          <h4 class="cs-heading" style="max-width:680px;">Two simultaneous risks: Skincare &amp; Makeup at stockout, Apparel at overstock &mdash; both requiring opposite action at the same time.</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;">
+            <div style="border-left:2px solid var(--burg);padding-left:20px;">
+              <div style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--burg);font-weight:600;margin-bottom:10px;">Stockout Risk</div>
+              <p class="cs-body">Velvet Tint at 45 units and Silk Scarf at 20 units heading into Q4 peak. Procurement needed to be triggered 2&ndash;3 months in advance to absorb the seasonal demand spike.</p>
+            </div>
+            <div style="border-left:2px solid rgba(10,10,10,.1);padding-left:20px;">
+              <div style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#888;font-weight:600;margin-bottom:10px;">Overstock Risk</div>
+              <p class="cs-body">Apparel category carrying 905 excess units, inflating holding costs. Lead times across South Korea (15 days) to Italy (33 days) create a 2&times; variance that compounds the timing risk.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 03 — STRATEGIC ACTION PLAN -->
+        <div class="fu" style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);background:var(--cream);">
+          <div style="padding:40px 48px;border-right:1px solid rgba(10,10,10,.06);">
+            <span class="cs-label">Panel 03 &mdash; Strategic Action Plan</span>
+            <h4 class="cs-heading">Three recommendations. One goal: protect Q4 revenue and reduce holding cost exposure.</h4>
+            <div style="display:flex;flex-direction:column;gap:14px;margin-top:20px;">
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <span style="font-family:var(--serif);font-size:18px;font-weight:900;color:var(--burg);line-height:1;flex-shrink:0;">01</span>
+                <p class="cs-body" style="margin:0;">Replenish +1,770 units of Skincare &amp; Makeup immediately to prevent lost Q4 sales during peak demand.</p>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <span style="font-family:var(--serif);font-size:18px;font-weight:900;color:var(--burg);line-height:1;flex-shrink:0;">02</span>
+                <p class="cs-body" style="margin:0;">Implement a 20% safety stock buffer across all categories to absorb vendor lead time variability.</p>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <span style="font-family:var(--serif);font-size:18px;font-weight:900;color:var(--burg);line-height:1;flex-shrink:0;">03</span>
+                <p class="cs-body" style="margin:0;">Launch targeted Apparel promotions to accelerate sell-through and recover holding costs.</p>
+              </div>
+            </div>
+          </div>
+          <div style="padding:40px 32px;display:flex;flex-direction:column;gap:20px;justify-content:center;">
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(32px,3.5vw,46px);font-weight:900;color:var(--burg);letter-spacing:-.03em;line-height:1;">+1,770</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">Units to replenish</div>
+            </div>
+            <div>
+              <div style="font-family:var(--serif);font-size:clamp(32px,3.5vw,46px);font-weight:900;color:var(--black);letter-spacing:-.03em;line-height:1;">20%</div>
+              <div style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-top:5px;">Safety stock policy</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESKTOP CTA BUTTONS -->
+        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);background:#fff;padding:36px 48px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+          <a href="https://leechlo7744.github.io/Project/presentation.pdf" target="_blank" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#fff;background:var(--burg);padding:13px 26px;text-decoration:none;font-weight:500;transition:background .3s;" onmouseover="this.style.background='#5a0a16'" onmouseout="this.style.background='var(--burg)'">View Case Study PDF</a>
+          <a href="https://public.tableau.com/views/Loe_Company_Dashboard/InventoryStrategyDemandPlanning2025" target="_blank" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--black);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(10,10,10,.25);padding-bottom:4px;transition:color .3s,border-color .3s;" onmouseover="this.style.color='#7A0E1E';this.style.borderColor='#7A0E1E'" onmouseout="this.style.color='';this.style.borderColor='';">View Tableau Dashboard &rarr;</a>
         </div>
 
       </div>
 
-      <!-- PROJECT 03 — YOUTUBE -->
-      <div class="cs-wrap fu" style="display:block;">
+            <!-- PROJECT 03 — CONSUMER ANALYTICS -->
+      <div class="cs-wrap fu">
 
-        <!-- WHITE HEADER -->
+        <!-- HEADER -->
         <div class="cs-hero cs-hero--white">
           <div class="cs-hero-content">
-            <div class="cs-eyebrow" style="color:var(--burg);">12-Month Self-Directed Project &middot; YouTube Analytics &middot; Apr 2025&ndash;Apr 2026</div>
-            <h3 class="cs-title" style="color:var(--black);">157K Views.<br>214 Hours Watched.</h3>
-            <p class="cs-body" style="max-width:560px;margin-top:16px;">A year of YouTube Shorts spanning NYC lifestyle, aesthetic, and transition content. 82.5% of discovery came from the Shorts feed — the algorithm doing what it does when the content earns it. 57.3K engaged views out of 157K total: more than a third of viewers didn&rsquo;t just watch — they acted.</p>
-            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">YouTube Studio &nbsp;&middot;&nbsp; 365 Days Data &nbsp;&middot;&nbsp; Shorts</p>
-            <span class="mob-proj-cta">View full case study on desktop</span>
+            <div class="cs-eyebrow" style="color:var(--burg);">Supporting Project &middot; Cross-Platform Analytics &middot; Apr 2025&ndash;Apr 2026</div>
+            <h3 class="cs-title" style="color:var(--black);">Consumer Analytics —<br>Cross-Platform Audience Behavior Study</h3>
+            <p class="cs-body" style="max-width:580px;margin-top:16px;">Self-directed analytics project evaluating audience retention, traffic source distribution, engagement patterns, and content performance trends across TikTok and YouTube, using platform dashboards to analyze 12 months of performance data, including 921K+ TikTok views and 157.1K YouTube Shorts views.</p>
+            <p class="cs-hero-sub" style="color:#aaa;margin-top:24px;">TikTok &nbsp;&middot;&nbsp; YouTube &nbsp;&middot;&nbsp; Retention &nbsp;&middot;&nbsp; Traffic Source Analysis &nbsp;&middot;&nbsp; Engagement Patterns</p>
           </div>
         </div>
 
-        <!-- STATS ROW — 4 col -->
-        <div class="cs-stats-row cs-stats-row--light" style="grid-template-columns:repeat(4,1fr);">
-          <div class="cs-stat fu">
-            <div class="cs-stat-n">157.1K</div>
-            <div class="cs-stat-l">Total Views</div>
-          </div>
-          <div class="cs-stat fu" style="transition-delay:.1s">
-            <div class="cs-stat-n">214.8h</div>
-            <div class="cs-stat-l">Watch Time</div>
-          </div>
-          <div class="cs-stat fu" style="transition-delay:.2s">
-            <div class="cs-stat-n" style="color:var(--burg);">57.3K</div>
-            <div class="cs-stat-l">Engaged Views</div>
-          </div>
-          <div class="cs-stat fu" style="border-right:none;transition-delay:.3s">
-            <div class="cs-stat-n">+263</div>
-            <div class="cs-stat-l">New Subscribers</div>
-          </div>
-        </div>
+        <!-- COMPACT ANALYSIS PANEL -->
+        <div class="fu" style="background:#0a0a0a;border-top:1px solid rgba(10,10,10,.06);padding:40px 48px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
 
-        <!-- VIDEO ANALYSIS — Short 01: NYC Soho -->
-        <div style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-top:1px solid rgba(10,10,10,.06);">
-
-          <!-- ANALYSIS LEFT -->
-          <div style="background:#0a0a0a;display:flex;flex-direction:column;">
-
-            <!-- Stats -->
-            <div class="fu" style="padding:52px 56px 40px;border-bottom:.5px solid rgba(255,255,255,.07);">
-              <span style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--burg);display:block;margin-bottom:20px;">Video Analysis &middot; Jun 29, 2025</span>
-              <div style="font-family:var(--serif);font-size:clamp(56px,7vw,88px);font-weight:900;color:#fff;letter-spacing:-.04em;line-height:.9;margin-bottom:14px;">181.3%</div>
-              <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#555;margin-bottom:32px;">Avg Percentage Viewed</div>
-              <div style="display:flex;gap:40px;">
+            <!-- TIKTOK COLUMN -->
+            <div>
+              <div style="font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--burg);font-weight:600;margin-bottom:20px;">TikTok &nbsp;&middot;&nbsp; Apr 2025&ndash;Apr 2026</div>
+              <div style="display:flex;gap:32px;margin-bottom:24px;">
                 <div>
-                  <div style="font-family:var(--serif);font-size:26px;font-weight:900;color:#fff;letter-spacing:-.02em;">76.7%</div>
+                  <div style="font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1;">921K</div>
+                  <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">Total views</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1;">83.9%</div>
+                  <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">FYP reach</div>
+                </div>
+              </div>
+              <div style="border-left:2px solid var(--burg);padding-left:16px;display:flex;flex-direction:column;gap:12px;">
+                <p style="font-size:12px;color:#888;line-height:1.75;margin:0;">Brand-partnership video (284K views) drove 85.6% traffic from &ldquo;Other&rdquo; sources &mdash; distribution channel, not FYP. Organic video at 20K views showed 7.62s avg watch time and 25.7% completion rate: stronger retention signal.</p>
+                <p style="font-size:12px;color:#666;line-height:1.75;margin:0;">Key insight: <em style="color:#aaa;">traffic source explains reach; watch time and completion rate measure audience quality.</em></p>
+              </div>
+            </div>
+
+            <!-- YOUTUBE COLUMN -->
+            <div>
+              <div style="font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--burg);font-weight:600;margin-bottom:20px;">YouTube Shorts &nbsp;&middot;&nbsp; Apr 2025&ndash;Apr 2026</div>
+              <div style="display:flex;gap:32px;margin-bottom:24px;">
+                <div>
+                  <div style="font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1;">157.1K</div>
+                  <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">Total views</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1;">43.7%</div>
                   <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">Stayed to watch</div>
                 </div>
-                <div>
-                  <div style="font-family:var(--serif);font-size:26px;font-weight:900;color:#fff;letter-spacing:-.02em;">23.2K</div>
-                  <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">Views</div>
-                </div>
-                <div>
-                  <div style="font-family:var(--serif);font-size:26px;font-weight:900;color:#fff;letter-spacing:-.02em;">0:10</div>
-                  <div style="font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#555;margin-top:5px;">Avg view duration</div>
-                </div>
               </div>
-            </div>
-
-            <!-- Insight + retention curve -->
-            <div class="fu" style="padding:40px 56px 52px;flex:1;display:flex;flex-direction:column;justify-content:center;">
-              <h4 style="font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:14px;">A 6-second video. Viewers watched it 1.8&times;.</h4>
-              <p style="font-size:13px;color:#777;line-height:1.85;margin-bottom:28px;">181.3% avg percentage viewed means the loop effect kicked in — people finished, then stayed for another round. 76.7% stayed to watch, nearly double the channel average. This high-retention segment proves that high-quality visual hooks directly mitigate the platform&rsquo;s default swipe-away behavior.</p>
-              <div style="margin-bottom:8px;">
-                <span style="font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#444;">Retention curve — stays above 100% throughout</span>
+              <div style="border-left:2px solid rgba(255,255,255,.1);padding-left:16px;display:flex;flex-direction:column;gap:12px;">
+                <p style="font-size:12px;color:#888;line-height:1.75;margin:0;">Top short hit 181.3% avg percentage viewed &mdash; the loop effect: viewers replayed after finishing. 76.7% retention rate on a 6-second video, with 82.5% of discovery coming from the Shorts feed.</p>
+                <p style="font-size:12px;color:#666;line-height:1.75;margin:0;">Key insight: <em style="color:#aaa;">high avg percentage viewed signals a visual hook strong enough to overcome the default swipe-away behavior.</em></p>
               </div>
-              <svg viewBox="0 0 380 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-                <line x1="0" y1="60" x2="340" y2="60" stroke="#222" stroke-width="0.6"/>
-                <line x1="0" y1="30" x2="340" y2="30" stroke="#222" stroke-width="0.6" stroke-dasharray="3,3"/>
-                <line x1="0" y1="5"  x2="340" y2="5"  stroke="#222" stroke-width="0.6" stroke-dasharray="3,3"/>
-                <text x="344" y="63" font-size="7" fill="#444" font-family="sans-serif">100%</text>
-                <text x="344" y="33" font-size="7" fill="#444" font-family="sans-serif">200%</text>
-                <text x="344" y="8"  font-size="7" fill="#444" font-family="sans-serif">300%</text>
-                <path d="M0,8 C10,8 16,11 28,14 L60,18 L110,22 L160,25 L210,27 L260,29 L300,30 L340,31" fill="none" stroke="#7A0E1E" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M0,8 C10,8 16,11 28,14 L60,18 L110,22 L160,25 L210,27 L260,29 L300,30 L340,31 L340,60 L0,60 Z" fill="rgba(122,14,30,0.12)"/>
-                <text x="0"   y="73" font-size="7" fill="#444" font-family="sans-serif">0:00</text>
-                <text x="155" y="73" font-size="7" fill="#444" font-family="sans-serif">0:03</text>
-                <text x="316" y="73" font-size="7" fill="#444" font-family="sans-serif">0:06</text>
-              </svg>
             </div>
 
           </div>
-
-          <!-- THUMBNAIL RIGHT — full height portrait -->
-          <a href="https://youtube.com/shorts/tjAllL0x8qA" target="_blank"
-            style="display:block;position:relative;overflow:hidden;text-decoration:none;">
-            <img src="https://i.ytimg.com/vi/tjAllL0x8qA/hqdefault.jpg"
-              style="width:100%;height:100%;object-fit:cover;display:block;min-height:400px;"/>
-            <div style="position:absolute;inset:0;background:rgba(0,0,0,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-              <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;">
-                <div style="width:0;height:0;border-style:solid;border-width:9px 0 9px 16px;border-color:transparent transparent transparent #111;margin-left:3px;"></div>
-              </div>
-              <span style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#fff;">Watch on YouTube</span>
-            </div>
-          </a>
-
-        </div>
-
-        <!-- VIDEO ANALYSIS PANEL 2 — placeholder for second video -->
-        <!-- TO BE ADDED -->
-
-        <!-- ANALYTICS PANEL — Bar chart + Stayed/Swiped -->
-        <div class="cs-panel cs-panel--white" style="align-items:stretch;border-top:none;">
-          <!-- TOP SHORTS BAR CHART -->
-          <div class="cs-text fu" style="padding:56px 52px;">
-            <span class="cs-label">Top Shorts Performance &middot; Last 365 Days</span>
-            <h4 class="cs-heading">One video did the heavy lifting.<br>NYC content leads by 5&times;.</h4>
-            <p class="cs-body" style="margin-bottom:32px;">The #newyork #soho short pulled 23.2K views — five times the next best performer. Location and lifestyle content consistently outperforms abstract aesthetic or transition videos on this channel.</p>
-            <div style="display:flex;flex-direction:column;gap:14px;">
-              <div>
-                <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:5px;letter-spacing:.04em;">
-                  <span>#newyork #soho</span><span style="color:var(--burg);font-weight:700;">23.2K</span>
-                </div>
-                <div style="height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden;">
-                  <div style="width:100%;height:100%;background:var(--burg);border-radius:2px;"></div>
-                </div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:5px;letter-spacing:.04em;">
-                  <span>Grrrr #transition #vibes</span><span>4.5K</span>
-                </div>
-                <div style="height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden;">
-                  <div style="width:19.4%;height:100%;background:#ccc;border-radius:2px;"></div>
-                </div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:5px;letter-spacing:.04em;">
-                  <span>#softgirl #aesthetic</span><span>3.9K</span>
-                </div>
-                <div style="height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden;">
-                  <div style="width:16.8%;height:100%;background:#ccc;border-radius:2px;"></div>
-                </div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:5px;letter-spacing:.04em;">
-                  <span>HAPPY FRIDAY #fyp</span><span>3.7K</span>
-                </div>
-                <div style="height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden;">
-                  <div style="width:15.9%;height:100%;background:#ccc;border-radius:2px;"></div>
-                </div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:5px;letter-spacing:.04em;">
-                  <span>Omw to gym #vibes</span><span>3.6K</span>
-                </div>
-                <div style="height:4px;background:#f0f0f0;border-radius:2px;overflow:hidden;">
-                  <div style="width:15.5%;height:100%;background:#ccc;border-radius:2px;"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- STAYED VS SWIPED -->
-          <div class="cs-text fr" style="padding:56px 52px;background:#fafafa;display:flex;flex-direction:column;justify-content:center;">
-            <span class="cs-label">Viewer Behavior &middot; Shorts Feed</span>
-            <h4 class="cs-heading" style="margin-bottom:28px;">43.7% stayed.<br>56.3% swiped.</h4>
-            <!-- Split bar -->
-            <div style="height:8px;border-radius:4px;overflow:hidden;display:flex;margin-bottom:20px;">
-              <div style="width:43.7%;background:var(--burg);"></div>
-              <div style="width:56.3%;background:#e0e0e0;"></div>
-            </div>
-            <div style="display:flex;gap:32px;margin-bottom:36px;">
-              <div>
-                <div style="font-family:var(--serif);font-size:28px;font-weight:900;color:var(--burg);letter-spacing:-.02em;">43.7%</div>
-                <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#aaa;margin-top:4px;">Stayed to watch</div>
-              </div>
-              <div>
-                <div style="font-family:var(--serif);font-size:28px;font-weight:900;color:#ccc;letter-spacing:-.02em;">56.3%</div>
-                <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#aaa;margin-top:4px;">Swiped away</div>
-              </div>
-            </div>
-            <p class="cs-body">On YouTube Shorts, the swipe-away rate is the key signal. Keeping 43.7% of viewers watching — in a format designed for instant dismissal — means the hook and first seconds are working. 82.5% of those viewers found the content through the Shorts feed, not search.</p>
-            <div style="margin-top:24px;display:flex;align-items:center;gap:16px;">
-              <div style="font-family:var(--serif);font-size:clamp(28px,3vw,38px);font-weight:900;color:var(--black);letter-spacing:-.02em;">82.5%</div>
-              <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#aaa;line-height:1.5;">Shorts feed<br>discovery</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- YOUTUBE CTA -->
-        <div class="fu" style="border-top:1px solid rgba(10,10,10,.06);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;background:#fff;">
-          <div style="font-size:12px;color:#aaa;letter-spacing:.08em;">@loe.cc_ &nbsp;&middot;&nbsp; YouTube</div>
-          <a href="https://www.youtube.com/@loe.cc0" target="_blank" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid rgba(10,10,10,.2);padding-bottom:2px;">View Channel &rarr;</a>
         </div>
 
       </div>
@@ -1496,7 +1259,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
     <div class="skill-evo fu" style="margin-top:64px;">
       <div class="stats" id="stats" style="margin-left:-64px;margin-right:-64px;">
         <div class="st fu"><div class="st-n"><span class="cnt" data-t="3">0</span><span>+</span></div><div class="st-l">Years Experience</div></div>
-        <div class="st fu" style="transition-delay:.1s"><div class="st-n"><span class="cnt" data-t="500">0</span><span>+</span></div><div class="st-l">POs Tracked</div></div>
+        <div class="st fu" style="transition-delay:.1s"><div class="st-n"><span class="cnt" data-t="150">0</span><span>+</span></div><div class="st-l">Seasonal Orders</div></div>
         <div class="st fu" style="transition-delay:.2s"><div class="st-n"><span class="cnt" data-t="5">0</span><span>+</span></div><div class="st-l">Global Brands</div></div>
         <div class="st fu" style="transition-delay:.3s"><div class="st-n"><span class="cnt" data-t="2">0</span><span></span></div><div class="st-l">Markets Operated</div></div>
       </div>
@@ -1522,8 +1285,8 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
               <span class="acc-icon">+</span>
             </div>
             <ul class="tl-list acc-body">
-              <li><strong>Demand Alignment:</strong> Analyzed 150+ seasonal orders to balance inventory levels with shifting market demand.</li>
-              <li><strong>Flow Optimization:</strong> Engineered custom tracking tools that eliminated supply chain bottlenecks and improved replenishment speed.</li>
+              <li><strong>Order &amp; Inventory Visibility:</strong> Analyzed 150+ seasonal orders to monitor order flow, inventory impact, shipment timing, and supply risks.</li>
+              <li><strong>Flow Optimization:</strong> Engineered custom tracking tools that improved order visibility, approval follow-up, and delivery timeline monitoring.</li>
               <li><strong>Efficiency Design:</strong> Improved trim production efficiency by proposing a direct-printing process that reduced manual handling and supported faster execution.</li>
             </ul>
           </div>
@@ -1559,7 +1322,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
               <div class="tl-tags">
                 <span class="ctg ctg-brand">Luxury RTW</span>
                 <span class="ctg-sep">|</span>
-                <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Mastery</span><span class="ctg ctg-hash">#Global_Sourcing</span>
+                <span class="ctg ctg-hash">#System_Precision</span><span class="ctg ctg-hash">#RLM_PLM_Support</span><span class="ctg ctg-hash">#Global_Sourcing</span>
               </div>
               <span class="acc-icon">+</span>
             </div>
@@ -1672,7 +1435,7 @@ footer{padding:32px 64px;display:flex;justify-content:space-between;align-items:
         <div style="font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;letter-spacing:-.01em;">This is the highlight reel.</div>
         <div style="font-size:12px;color:#aaa;letter-spacing:.15em;text-transform:uppercase;margin-top:8px;">The full resume has every detail, every number, every tool.</div>
       </div>
-      <a href="https://leechlo7744.github.io/Chloe_Lee_Resume.pdf" target="_blank" class="resume-btn">Download Resume →</a>
+      <a href="Chloe_Lee_Resume.pdf" target="_blank" class="resume-btn">Download Resume →</a>
     </div>
 
   </div>
